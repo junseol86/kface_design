@@ -1,0 +1,79 @@
+#popup-user-payment {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: none;
+  font-family: 'Malgun Gothic', '맑은고딕'
+}
+
+#popup-user-payment div.close {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 4px 8px;
+  background-color: #5370f0;
+  color: white;
+  font-weight: bold;
+}
+
+#popup-user-payment div.window {
+  width: 500px;
+  padding: 15px 0 15px 0;
+  background-color: white;
+  margin: 200px auto 0 auto;
+  position: relative;
+  font-size: 1.15em;
+}
+
+/* 아래부터 적용합니다. */
+
+#popup-user-payment div.window .body {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  margin-bottom: 18px;
+  font-size: 0.8em;
+}
+
+#popup-user-payment div.window .body td.imgCon {
+  width: 200px;  
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#popup-user-payment div.window .body td.content {
+  line-height: 1.3em;
+  padding: 24px 0;
+}
+
+#popup-user-payment div.window .body td.content h1 {
+  font-size: 1.3em;  
+  line-height: 2em;
+}
+
+#popup-user-payment div.window .body td.content h1 span {
+  color: #5370f0;
+}
+
+#popup-user-payment div.window .body td.content div span {
+  color: #5370f0;
+}
+
+#popup-user-payment div.window .foot {
+  text-align: right;
+  font-size: 0.9em;
+  padding-right: 8px;
+}
+
+#popup-user-payment div.window .foot span {
+  cursor: pointer;
+}
+
+#popup-user-payment div.window .foot span:hover {
+  color: #5370f0;
+}

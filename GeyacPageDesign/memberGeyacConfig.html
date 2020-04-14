@@ -1,0 +1,559 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>디디하우스 - 포항부동산의 시작</title>
+<link rel="stylesheet" type="text/css" href="/css/geyac_common.css"/>
+<link rel="stylesheet" type="text/css" href="/css/custom-theme/jquery-ui-1.10.2.custom.css" />
+<link rel="stylesheet" href="/jsp/member/geyac/js/themes/default/style.min.css" />
+
+
+<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.10.2.custom.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="/js/json2.js"></script>
+<script type="text/javascript" src="/js/dd_ajax.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/ddhouse_common.js" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+	
+
+	
+
+	$(document).ready(function() {
+				
+	    $("#folder_items").sortable({
+	    	update : f_orderFolder
+	    });
+	    $("#folder_items").disableSelection();
+	    $("#folder_items li").on("click", function(){
+	    	$('#folder_items li').removeClass("active");
+	    	$(this).addClass("active");
+	    	
+	    	$('#selected_folder_idx').val($(this).data('fidx'));
+	    	$('#folder_rename').val($(this).text());
+	    })
+	    
+	    
+	    
+	    
+	    $('#folder_gubun').on("change", function(){
+	     	var frm = document.forms.frmMenu;
+	     	frm.folder_gubun.value = $('#folder_gubun').val();
+	     	frm.action = "/memberGeyacConfig.do";
+	     	frm.submit();
+	    });
+	    
+	});
+	    
+	  
+	//폴더순서변경
+	function f_orderFolder(event, ui){
+		var reorder = "";
+		$('#folder_items li').each(function(){
+			//console.warn($(this).data("fidx"));
+			reorder += ",";
+			reorder += $(this).data("fidx");
+		});
+		
+		
+		$.ajax({
+			url: "/memberGeyacConfig.do", 
+			type: "post",
+			data: {
+				"selAction":"folder_sort",
+				"reorder" : reorder 
+			},
+			dataType: "json",
+			error: function(){
+				//nothing;
+			},
+			success: function(data){
+				//nothing;
+			}
+		});
+		
+	}
+	
+	//폴더명 변경
+	function f_updateFolder(){
+		if($('#folder_rename').val()==""){
+			alert("변경할 폴더명을 입력해주세요");
+			$('#folder_rename').focus();
+			return;
+		}
+		
+		var frm = document.forms.frmMenu;
+		frm.selAction.value = "folder_update";
+     	frm.folder_idx.value = $('#selected_folder_idx').val();
+     	frm.folder_gubun.value = $('#folder_gubun').val();
+     	frm.folder_name.value = $('#folder_rename').val();
+     	frm.action = "/memberGeyacConfig.do";
+     	frm.submit();
+	}	
+	//폴더삭제
+	function f_deleteFolder(){
+		if($('#selected_folder_idx').val()=="" || $('#selected_folder_idx').val()=="-1"){
+			
+			alert("삭제하실 폴더를 선택해주세요.");
+			return;
+		}
+
+		if(confirm("선택하신 폴더를 삭제하시겠습니까?\n해당 즐겨찾기 폴더내 자료는 삭제되지 않습니다.")){
+			var frm = document.forms.frmMenu;
+			frm.selAction.value = "folder_delete";
+	     	frm.folder_idx.value = $('#selected_folder_idx').val();
+	     	frm.folder_gubun.value = $('#folder_gubun').val();
+	     	frm.action = "/memberGeyacConfig.do";
+	     	frm.submit();
+		}
+	}	
+	
+	
+	//폴더를 추가한다.
+	function f_addfolder(){
+		if($('#new_folder_name').val()==""){
+			alert("추가할 폴더명을 입력해주세요");
+			return;
+		}
+		
+		
+		var frm = document.forms.frmMenu;
+		frm.selAction.value = "folder_add";
+     	frm.folder_gubun.value = $('#folder_gubun').val();
+     	frm.folder_name.value = $('#new_folder_name').val();
+     	frm.action = "/memberGeyacConfig.do";
+     	frm.submit();
+     	
+	}
+	
+	
+</script>
+  
+  
+</head>
+<body>
+<form name="frmMenu" method="post" target="">
+<input type="hidden" name="selAction" value=""/>
+<input type="hidden" name="folder_idx" value=""/>
+<input type="hidden" name="folder_gubun" value=""/>
+<input type="hidden" name="folder_name" value=""/>
+
+</form>
+
+
+
+
+
+<!-- Global Wrapper.s -->
+<div id="wrap">
+	<!-- 상단정보 시작 -->
+	<div id="tnb">
+		
+
+
+
+<script>
+	/**
+	 * 토큰을 삭제한다.
+	 */
+    function f_logout(){
+		/*운영*/
+        document.cookie = "_dd_token='';-1;path=/;domain=.ddhouse.co.kr;";
+        document.cookie = "_dd_token_refresh='';-1;path=/;domain=.ddhouse.co.kr;";
+        //window.location.href = "https://www.ddhouse.co.kr"; //운영의 경우 https로 이동
+
+        /*개발시*/
+        //document.cookie = "_dd_token='';-1;path=/;domain=.ddhouse.co.kr;";
+        //document.cookie = "_dd_token_refresh='';-1;path=/;domain=.ddhouse.co.kr;";
+		window.location.href = "http://www.ddhouse.co.kr";
+
+	}
+
+	function setCookie(){
+
+	}
+
+	$(function(){
+		
+	  	/* ==============
+	  	윈도우 사이즈 변경시
+	  	================*/
+	  	$(window).resize(function(){
+  			var h_hei = $(window).height();
+	  		if($("#gy_content_wrap").height()<h_hei){
+		  		$("#gy_content_wrap").height(h_hei-50);	
+	  		}
+	  		
+	  	});
+	    
+	    /* ===========
+	       로딩시 
+	    =========*/
+	    $(document).ready(function(){
+	    	
+  			var h_hei = $(window).height();
+	    	if($("#gy_content_wrap").height()<h_hei){
+		  		$("#gy_content_wrap").height(h_hei-50);
+		  		console.warn(h_hei-50);
+	  		}	    	
+	    });
+	    
+	});
+</script>
+
+	
+<div style="position:relative;">
+	<!-- <a class="logo" style="padding-left:20px" href="/"><img src="/img/logo.jpg" style="height:100%;"/></a> -->
+	<div style="text-align:left; line-height:50px; font-size:14px; font-weight:bold; color:white; padding-left:10px;">
+    <span style="font-size:20px; padding:0 10px;">MBC</span>공인중개사무소 <span style="padding-left:8px;">계약 관리시스템</span>
+
+    <!-- 디자인 변경 -->
+		<span id="beta-warn">베타기간 동안에는 현재 계약서 시스템에서 등록,수정한 정보는 반영되지 않습니다.</span>
+	</div>
+	
+	
+	
+	
+    
+	<span style="padding-right:10px; font-size:12px; letter-spacing:1px; word-spacing:7px; position: absolute; right: 0; top:13px; color: white;">
+		<span style="margin-right:20px"><span style="font-weight:bold">디디상담원A님</span> 환영합니다.</span>
+		<a href="javascript: f_logout()">로그아웃</a>
+	</span>
+</div>
+	
+	</div>
+	<!-- 상단정보 끝-->
+
+	
+	
+	
+	<!-- 컨테이너 시작 -->
+	<div id="gy_container">
+		<!-- 메뉴 시작 -->
+		
+
+
+
+
+
+
+
+<script type="text/javascript" src="/jsp/member/geyac/js/jstree.min.js"></script>    
+<script>
+
+$(document).ready(function(){
+	/* 왼쪽 메뉴 트리 ---- */
+	$('#jstree_gy').jstree();
+	$('#jstree_gy_fav').jstree();
+	$('#jstree_gy, #jstree_gy_fav').on("changed.jstree", function(e, data) {
+		var _json = JSON.parse(data.selected);
+		f_goGyList(_json.gy_cate01,_json.gy_kind, _json.fav_folder_idx);
+	});
+	
+	
+	
+	$('#jstree_cust').jstree();
+	$('#jstree_cust_fav').jstree();
+	$('#jstree_cust, #jstree_cust_fav').on("changed.jstree", function(e, data) {
+		var _json = JSON.parse(data.selected);
+		f_goGyCustomerList(_json.gy_rel_yn, _json.cust_folder_idx);
+	});
+	
+	
+	
+	$('#jstree_cal').jstree();
+	$('#jstree_cal').on("changed.jstree", function(e, data) {
+		alert("준비중입니다");
+	});
+	
+	
+	/* --- 트리끝 */
+	
+	
+    $('#jstree_cust').jstree("open_all");
+    
+});
+
+
+
+//계약서목록으로 이동
+function f_goGyList(i_cate01, i_kind, i_folder){
+	var frm = document.forms.frmLeftMenu;
+	frm.selAction.value = "V";
+	
+	//추후 목록화면(jsp)를 계약서구분해서 나눌 경우..
+	//if(i_cate01) frm.gy_cate01.value = i_cate01;
+	if(i_cate01) frm.selGyCate01.value = i_cate01;
+	if(i_kind) frm.selGyKind.value = i_kind;
+	if(i_folder) frm.selFavFolderIdx.value = i_folder;
+	
+	frm.action = "/memberGeyacList.do";
+	frm.submit();
+}
+
+
+//고객목록으로 이동
+function f_goGyCustomerList(i_gyRelYn, i_folder){
+	var frm = document.forms.frmLeftMenu;
+	frm.selAction.value = "V";
+	if(i_gyRelYn) frm.selGyRelYn.value = i_gyRelYn;
+	if(i_folder) frm.selCustFolderIdx.value = i_folder;
+	
+	
+	frm.action = "/memberGeyacCustomer.do";
+	frm.submit();
+}
+
+
+//폴더관리
+function f_folderConfig(i_gbn){
+	var frm = document.forms.frmLeftMenu;
+	frm.selAction.value = "folder";
+	if(i_gbn){
+		frm.folder_gubun.value = i_gbn;
+	}
+	
+	frm.action = "/memberGeyacConfig.do";
+	frm.submit();
+}
+
+</script>
+<form name="frmLeftMenu" method="post" target="">
+<input type="hidden" name="selAction" value=""/>
+<input type="hidden" name="selGyCate01" value=""/>
+<input type="hidden" name="selGyKind" value=""/>
+<input type="hidden" name="selGyRelYn" value=""/>
+<input type="hidden" name="selFavFolderIdx" value=""/>
+<input type="hidden" name="selCustFolderIdx" value=""/>
+<input type="hidden" name="folder_gubun" value="GY"/>
+</form>
+
+
+<form name="frmPrint" method="post" target="">
+<input type="hidden" name="selAction" value=""/>
+<input type="hidden" name="gy_cate01" value=""/>
+<input type="hidden" name="gy_idx" value=""/>
+<input type="hidden" name="print_cover" value=""/>
+<input type="hidden" name="print_geyac" value=""/>
+<input type="hidden" name="print_confirm" value=""/>
+<input type="hidden" name="print_privacy" value=""/>
+</form>
+    
+<div id="lmenu">
+			
+			
+			<div class="lmenu_wrap">
+			
+				<!-- 메뉴 #1. 계약서 -->
+				<div class="mtitle">계약서</div>
+				<div class="tree_wrap">
+					<div class="tree_container">
+					  <div>
+					  	<a href="javascript: f_goGyList()">전체보기(7)</a>
+					  </div>
+					  <div id="jstree_gy">
+					    <ul>
+					      <li id='{"gy_cate01":"01", "gy_kind":""}' class="">부동산(7)
+					        <ul>
+					          <li id='{"gy_cate01":"01", "gy_kind":"매매"}'>매매<span style="font-size:12px">(0)</span></li>
+					          <li id='{"gy_cate01":"01", "gy_kind":"전세"}'>전세(0)</li>
+					          <li id='{"gy_cate01":"01", "gy_kind":"월세"}'>월세(7)</li>
+					          <li id='{"gy_cate01":"01", "gy_kind":"연세"}'>연세(0)</li>
+					        </ul>
+					      </li>
+					      <li id='{"gy_cate01":"02", "gy_kind":""}'>분양권(0)</li>
+					      <li id='{"gy_cate01":"03", "gy_kind":""}'>권리양도양수(0)</li>
+					      <li id='{"gy_cate01":"04", "gy_kind":""}'>표준임대차계약서(0)</li>
+					      <li id='{"gy_cate01":"05", "gy_kind":""}'>상가권리금계약서(0)</li>
+					      <li id='{"gy_cate01":"06", "gy_kind":""}'>상가임대차계약서(0)</li>
+					    </ul>
+					  </div>
+					</div>
+					
+					
+					<div class="tree_container">
+					  <div>
+					  	즐겨찾기 
+					  	<a style="float:right;" href="javascript: f_folderConfig('GY')"><img src="/img/icon/icon_config.png" style="width:15px; height:15px;margin-top: -5px;"/> 설정</a>
+					  </div>
+					  <div id="jstree_gy_fav">
+					    <ul>
+					    	
+					      	<li  id='{"gy_cate01":"", "gy_kind":"", "fav_folder_idx":"1543"}' class="">하늘애(7)</li>
+					      	
+					    </ul>
+					  </div>
+					</div>
+					
+				</div>
+				<!-- 메뉴 #1. 계약서  끝-->
+
+				
+				<!-- 메뉴 #3. 고객관리 -->
+				<div class="mtitle">계약 정보</div>
+				<div class="tree_wrap">
+					<!-- 기본트리 -->
+					<div class="tree_container">
+					  <div>
+						  <a href="/memberGeyacCal.do">계약서 일정</a><br/>
+						  <a href="javascript: f_goGyCustomerList()">계약서 고객</a>
+					  </div>
+					  
+					</div>
+					<!-- 기본트리 끝 -->
+					<!-- 즐겨찾기 -->
+					
+					<!-- 즐겨찾기 끝-->
+				</div>
+				<!-- 메뉴 #3. 고객관리 -->
+
+				
+
+				
+				<!-- 메뉴 #2. 일정관리 -->
+				<!-- <div class="mtitle">일정관리</div>
+				<div class="tree_wrap">
+					<div class="tree_container">
+					  <div>
+					  	전체보기
+					  </div>
+					  <div id="jstree_cal">
+					    <ul>
+					      <li>분양일정</li>
+					      <li>계약만기일정</li>
+					      <li>중개사무소일정
+					        <ul>
+					          <li id="">술자리</li>
+					          <li id="">모임</li>
+					          <li id="">휴가</li>
+					        </ul>
+					      </li>
+					    </ul>
+					  </div>
+					</div>
+				</div> -->
+				<!-- 메뉴 #2. 일정관리 -->
+
+				
+				
+			</div>
+		</div>
+		<!-- 메뉴 끝  -->
+		
+		
+	 	<div id="gy_content_wrap">
+	 	
+	 		<div class="content_top">
+	 			<div class="content_top_title">
+					<h1>계약관리 시스템 설정 :: 즐겨찾기 관리</h1>
+					<br style="clear:both"/>
+	 			</div>
+			</div>
+			
+			<div style="width:1100px; /* margin:0 auto */"> <!-- 900 + 180 + 패딩 -->
+	 		
+			<!-- 등록폼 틀(rform) -->
+			<div class="rform">
+			<form name="frmRegist" method="post" target="">
+			<input type="hidden" name="selAction" value=""/>
+				<div class="config_tabmenu"> 
+					<span class="active">즐겨찾기 폴더</span>
+					<!-- <span onclick="javascript: alert('준비중입니다.')">특약사항</span> -->
+				</div>
+
+				<!-- 고객정보 본문(rform_body) 시작-->				
+				<div id="rform_body" style="border:1px solid #efefef">
+					
+					
+					
+					<div class="body" style="padding-bottom:0">
+	                    
+            <p class="title" style="padding-top:20px">
+
+              <!-- 디자인 변경 -->
+							<select id="folder_gubun" style="line-height:30px; height:30px; margin-bottom:15px;">
+								<option value="GY" selected>계약서 폴더</option>
+								<option value="CUST" >고객관리 폴더</option>
+							</select>
+						</p>
+						<div>
+							<div class="folder_wrap">
+								
+								
+								<ul id="folder_items" class="folder_items">
+									
+								  	<li data-fidx="1543">하늘애</li>
+								  	
+								</ul>
+							</div>
+							
+							<div style="float:left; margin-left:15px; line-height:25px;">
+								&middot; 신규폴더 추가<br/>
+								<input type="text" id="new_folder_name" maxlength="10" style="height:30px; line-height:30px; padding-left:5px; border:1px solid gray; width:160px" />
+								<a href="javascript: f_addfolder()" class="btn-search" style="margin-left:0">추가</a>
+								
+								<br/><br/>
+							
+								&middot; 선택된 폴더<br/>
+								<input type="hidden" id="selected_folder_idx" value="-1"/>
+								<input type="text" id="folder_rename" maxlength="10" style="height:30px; line-height:30px; padding-left:5px; border:1px solid gray; width:160px">
+								<a href="javascript: f_updateFolder()" class="btn-search" style="margin-left:0; margin-right:0">이름변경</a>
+								<a href="javascript: f_deleteFolder()" class="btn-search" style="margin-left:0">삭제</a>
+							</div>
+							
+							<br style="clear:both"/>
+						</div>
+						<p>
+						※ 표시순서는 폴더를 드래그해서 변경 주시기 바랍니다.
+						</p>
+						<!-- <div style="text-align:left; padding:5px 0">
+							<input type="text" id="new_folder_name" maxlength="10" style="height:30px; line-height:30px; border:1px solid gray; padding-left:5px; width:140px" />
+							<a href="javascript: f_addfolder()" class="btn-search">폴더 추가</a>
+						</div> -->
+							
+						
+	                    
+					</div>
+					<!-- body 끝 -->
+					
+				</div>
+				<!-- 고객정보 본문 끝 -->
+				
+				
+				
+				
+				
+				
+			</form>	
+			</div>
+			<!-- 등록폼(rform) 끝 -->
+			
+			</div>
+			
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- 컨테이너 끝  -->
+	
+
+ 
+
+</div>
+<!-- Global Wrapper.e -->
+
+
+
+</body>
+</html>

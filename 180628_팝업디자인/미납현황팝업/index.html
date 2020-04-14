@@ -1,0 +1,122 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+  </head>
+
+  <script>
+    function accountStatSwitch(which) {
+      $("#account_bill_list .tab").removeClass("on");
+      $("#account_bill_list ." + which + ".tab").addClass("on");
+      if (which == 'bill') {
+        $("#account_bill_list .bill_wrap").show();
+        $("#account_bill_list .tax_wrap").hide();
+      } else {
+        $("#account_bill_list .tax_wrap").show();
+        $("#account_bill_list .bill_wrap").hide();
+      }
+    }
+  </script>
+
+  <body>
+
+      <div class="account_status_bg">
+
+        <div>
+
+          <div class="account_wrap">
+
+            <table class="head">
+              <tr>
+                <td class="title">
+                  입금현황 (최종확인: 2018년 6월 28일)
+                </td>
+                <td class="close">
+                  <img class="on" src="img/close_on.png"/>
+                  <img class="off" src="img/close_off.png"/>
+                </td>
+  
+              </tr>
+  
+            </table>
+
+            <div id="account_bill_list">
+              <!-- 제목줄 -->
+              <div class="overList">
+
+                <table class="switch" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="tab bill on" onclick="accountStatSwitch('bill')">
+                      청구-결재 내역
+                    </td>
+                    <td class="tab tax" onclick="accountStatSwitch('tax')">
+                      영수증 계산서 발행내역
+                    </td>
+                  </tr>
+
+                </table>
+                <span class="contact">문의: 010-6552-9075</span>
+
+                <!-- <span class="tab on" list_wrap="bill_wrap">청구-결재 내역</span>
+                &nbsp;&nbsp;&nbsp;
+                <span class="tab" list_wrap="tax_wrap">영수증 계산서 발행내역</span> -->
+              </div>
+              
+              <div>
+                <!-- 청구,결재내역 -->
+                <div class="wrpas bill_wrap" style="max-height: 600px; overflow-y: auto; ">
+                  <table class="bill_list" cellpadding="0" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th style="width:45px;">No.</th>
+                        <th style="width:75px;">구분</th>
+                        <th>청구내역</th>
+                        <th style="width:95px;">청구금액(원)</th>
+                        <th style="width:85px;">결제일</th>
+                        <th style="width:80px;">입금방식</th>
+                        <th style="width:70px;">결제</th>
+                        <th style="width:100px;">입금일</th>
+                      </tr>
+                    </thead>
+                    <tbody><tr>	<td>6</td>	<td>정보이용</td>	<td class="title">2018년 07월 청구서</td>	<td>110,000</td>	<td>2018-06-25</td>	<td>월납</td>	<td>-</td>	<td></td></tr><tr>	<td>5</td>	<td>정보이용</td>	<td class="title">2018년 06월 청구서</td>	<td>110,000</td>	<td>2018-05-25</td>	<td>월납</td>	<td>완료</td>	<td>2018-06-04</td></tr><tr>	<td>4</td>	<td>정보이용</td>	<td class="title">2018년 05월 청구서</td>	<td>110,000</td>	<td>2018-04-25</td>	<td>월납</td>	<td>완료</td>	<td>2018-05-04</td></tr><tr>	<td>3</td>	<td>정보이용</td>	<td class="title">2018년 04월 청구서</td>	<td>110,000</td>	<td>2018-03-25</td>	<td>월납</td>	<td>완료</td>	<td>2018-04-06</td></tr><tr>	<td>2</td>	<td>정보이용</td>	<td class="title">2018년 03월 청구서</td>	<td>110,000</td>	<td>2018-02-25</td>	<td>월납</td>	<td>완료</td>	<td>2018-03-02</td></tr><tr>	<td>1</td>	<td>정보이용</td>	<td class="title">2018년 02월 청구서</td>	<td>110,000</td>	<td>2018-01-25</td>	<td>월납</td>	<td>완료</td>	<td>2018-02-05</td></tr></tbody>
+                  </table>
+                </div>
+                
+                <!-- 영수증 계산서 발행내역 -->
+                <div class="wrpas tax_wrap" style="max-height: 600px; overflow-y: auto; display:none;">
+                  <table class="tax_list" cellpadding="0" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th style="width:45px;">No.</th>
+                        <th style="width:75px;">구분</th>
+                        <th>항목</th>
+                        <th style="width:100px;">발행구분</th>
+                        <th style="width:85px;">입금일</th>
+                        <th style="width:85px;">발행일</th>
+                        <th style="width:115px;">발행금액</th>
+                      </tr>
+                    </thead>
+                    <tbody><tr>	<td>1</td>	<td>정보이용</td>	<td class="title">2018년 06월 청구서</td>	<td>세금계산서</td>	<td>2018-06-04</td>	<td>2018-06-19</td>	<td>550,000</td></tr></tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="foot">
+              </div>
+
+            </div>
+
+          </div>
+
+            
+        </div>
+
+      </div>
+
+  </body>
+
+</html>

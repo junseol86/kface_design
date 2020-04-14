@@ -1,0 +1,100 @@
+._showtel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 300;
+  display: table;
+  font-family: 'Malgun Gothic', '맑은고딕'
+}
+
+._showtel > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+._showtel .window_180628 {
+  background-color: white;
+  margin: auto;
+  position: relative;
+  width: 440px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+._showtel .window_180628 table {
+  width: 100%;
+}
+
+._showtel .window_180628 .head {
+  height: 48px;
+  line-height: 48px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #eee;
+}
+
+._showtel .window_180628 .head .title {
+  padding: 0 16px;
+}
+
+._showtel .window_180628 .head .close {
+  width: 48px;
+  cursor: pointer;
+}
+
+._showtel .window_180628 .head .close .on {
+  display: none;
+}
+
+._showtel .window_180628 .head .close:hover .on {
+  display: inline;
+}
+
+._showtel .window_180628 .head .close:hover .off {
+  display: none;
+}
+
+
+._showtel .window_180628 .body td {
+  height: 136px;
+  vertical-align: middle;
+}
+
+._showtel .window_180628 .body td.imgCon {
+  width: 132px;
+  text-align: center;
+}
+  
+
+._showtel .window_180628 .body td .realtor {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+._showtel .window_180628 .body td .realtor span {
+  color: #5370f0;
+}
+
+._showtel .window_180628 .body td .charge span {
+  color: #bbb;
+  margin-right: 2px;
+}
+
+._showtel .window_180628 .body td .phone {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 2px;
+  color: #5370f0;
+}
+
+._showtel .window_180628 .foot {
+  padding: 12px 16px;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  color: #888;
+  background-color: #f5f5f5;
+  border-top: 1px solid #eee;
+}

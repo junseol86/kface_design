@@ -1,0 +1,1576 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>디디하우스 - 포항부동산의 시작</title>
+<link rel="stylesheet" type="text/css" href="/css/geyac_common.css"/>
+<link rel="stylesheet" type="text/css" href="/css/custom-theme/jquery-ui-1.10.2.custom.css" />
+<link rel="stylesheet" href="/jsp/member/geyac/js/themes/default/style.min.css" />
+
+
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false"></script><!-- 다음주소찾기 -->
+<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.10.2.custom.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="/js/json2.js"></script>
+<script type="text/javascript" src="/js/dd_ajax.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/ddhouse_common.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/geyac_common.js" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+	
+
+	
+
+	$(document).ready(function() {
+		
+		
+		//최초 포커싱
+		$('#gy_loc').focus();
+
+		$('.gy_form_m, .gy_form_j, .gy_form_w, .gy_form_y').hide();
+		var data = {"isEmpty":false,"gy_idx":"4653","gy_cate01":"01","gy_title":"부동산(다가구주택)","gy_loc":"경북 포항시 북구 우현동 123-12 체킹빌리지","gy_kind":"월세","comp_yn":"Y","fav_folder_idx":"1543","s_fav_folder_name":"하늘애","confirm_idx":"-1","gy_memo":"","cfm_comp_yn":"","gy_person_medo1_addr":"경북 포항시 북구 우현동 123-12 체킹빌리지 501호","gy_person_medo1_idno_gubun":"주민등록번호","gy_person_medo1_idno":"620504-1144587","gy_person_medo1_tel":"010-1234-5678","gy_person_medo1_name":"홍길동","gy_person_medo2_gubun":"대리인","gy_person_medo2_addr":"","gy_person_medo2_idno_gubun":"주민등록번호","gy_person_medo2_idno":"-","gy_person_medo2_tel":"","gy_person_medo2_name":"","gy_person_mesu1_addr":"경북 포항시 북구 우현동 123-12 체킹빌리지 203호","gy_person_mesu1_idno_gubun":"주민등록번호","gy_person_mesu1_idno":"910905-1127587","gy_person_mesu1_tel":"010-4321-9876","gy_person_mesu1_name":"김갑수","gy_person_mesu2_gubun":"대리인","gy_person_mesu2_addr":"","gy_person_mesu2_idno_gubun":"주민등록번호","gy_person_mesu2_idno":"-","gy_person_mesu2_tel":"","gy_person_mesu2_name":"","gy_agent1_addr":"","gy_agent1_regno":"","gy_agent1_name":"","gy_agent1_tel":"","gy_agent1_ceo":"","gy_agent2_addr":"","gy_agent2_regno":"","gy_agent2_name":"","gy_agent2_tel":"","gy_agent2_ceo":"","sts":"I","user_id_created":"dudetester","user_id_modify":"dudetester","cdate":"2019-02-07 17:00:28.0","udate":"2019-02-07 17:04:28.0","gy_price_unit":"원","gy_price_fmt":"한글+숫자","gy_special_agree1":"1) 옵션사항은 임차인 계약기간만료일까지 분실, 파손시 책임진다.\r\n2) 계약기간전 이사시 임차인은 방을 임대후 나간다 (중개수수료등은 임차인이 부담한다)\r\n3) 임대인계좌번호: 농협 311-1234-5678-90 홍길동\r\n4) 옵션사항: 에어컨, 가스렌지, 세탁기, 냉장고, TV, 책상, 의자, 침대, 서랍장\r\n5) 세대가스요금, 전기요금은 임차인이 부담한다.\r\n6) 임차인은 계약기간 만료 1개월전까지 계약의 종료 또는 연장여부를 임대인에게 통보하기로 하며 당사자간 아무의사표시없이 계약기간이 경과한 경우 자동으로 계약이 연장된 것으로 본다.\r\n\r\n","gy_special_agree2":"","gy_date":"2019-01-21","LOCATION":1,"DEAL_PRICE":2,"DEAL_PRICE_2":21,"DEAL_PRICE_3":22,"COVER_TITLE":3,"SUSURYO_RATE":4,"PERSON_TITLE_MEDO":5,"PERSON_TITLE_MESU":6,"gy_loc_dong":"","gy_loc_ho":"","gy_land_cate1":"지목","gy_land_cate2":"대","gy_land_rate":"","gy_land_share":"","gy_land_area":"","gy_bd_gujo":"철근콘크리트","gy_bd_yongdo":"다가구주택","gy_bd_area":"","gy_price_meme":"2000000","gy_price_contract":"200000","gy_price_yungja":"0","gy_price_yungja_comment":"현 상태에서 매수인이 승계함","gy_price_imdebojeung":"0","gy_price_imdebojeung_comment":"현 상태에서 매수인이 승계함","gy_price_jungdo1":"0","gy_price_jungdo1_date":"","gy_price_jungdo2":"0","gy_price_jungdo2_date":"","gy_price_balance":"1800000","gy_price_balance_date":"2019-01-21","gy_delivery_date":"2019-01-21","gy_agree_ext01":"[채무불이행과 손해배상] 매도인 또는 매수자가 본 계약상의 내용에 대하여 불이행이 있을 경우 그 상대방은 불이행한 자에 대하여 서면으로 최고하고 계약을 해제할 수 있다. 그리고 계약 당사자는 계약해제에 따른 손해배상을 각각 상대방에게 청구할 수 있으며, 손해 배상에 대하여 별도의 약정이 없는 한 계약금을 손해배상의 기준으로 본다.","gy_agree_ext02":"[중개보수] 개업공인중개사는 매도인 또는 매수인의 본 계약 불이행에 대하여 책임을 지지 않는다. 또한 중개보수는 본 계약 체결과 동시에 계약 당사자 쌍방이 각각 지불하며, 개업공인중개사의 고의나 과실없이 본 계약이 무효, 취소 또는 해제 되어도 중개보수는 지급한다. 공동 중개인 경우에 매도인과 매수인은 자신이 중개 의뢰한 개업공인중개사에게 각각 중개보수를 지급한다.","gy_agree_ext03":"[중개보수 외] 매도인 또는 매수인이 본 계약 이외의 업무를 의뢰한 경우 이에 관한 보수는 중개보수와는 별도로 지급하며 그 금액은 합의에 의한다.","gy_imdebubun":"203호 (원룸) 전부","gy_imdebubun_area":"30","gy_duration_date":"2020-01-20","gy_duration_month":"12","gy_price_chaim":"300000","gy_price_chaim_month":"0","gy_price_chaim_day":"21","gy_price_chaim_paymethod":"선불"};
+		if(data.gy_kind=="매매"){			$('.gy_form_m').show();
+		}else if(data.gy_kind=="전세"){	$('.gy_form_j').show();
+		}else if(data.gy_kind=="월세"){	$('.gy_form_w').show();
+		}else if(data.gy_kind=="연세"){	$('.gy_form_y').show();
+		}else{	$('.gy_form_m').show();
+		}
+		
+		
+		//== 제목변경
+		$('#gy_title__disp').on("change", function(){
+			console.warn($(this).val());
+			if($(this).val()=="직접입력"){
+				$('#gy_title').show();
+			}else{
+				$('#gy_title').hide();
+			}
+			$('#gy_title').val($(this).val());
+			$('#gy_title_area').html($(this).val());
+		});
+		$('#gy_title').on("keyup", function(){
+			$('#gy_title_area').html($(this).val());
+		});
+		
+		
+		
+		//건물 구조,용도 가 직접 입력 시
+		$(document).on('change', '#gy_bd_gujo, #gy_bd_yongdo', function(){
+			//console.warn($(this).val());
+			var _id = $(this).attr('id');
+			if($(this).val() == "직접입력"){
+				$('#area-text--'+_id).css('display', 'block');	
+			}else{
+				$('#area-text--'+_id).hide();
+			}
+		});
+		
+		if($('#gy_bd_gujo').val() == "직접입력"){
+			$('#area-text--gy_bd_gujo').css('display', 'block');
+		}
+		if($('#gy_bd_yongdo').val() == "직접입력"){
+			$('#area-text--gy_bd_yongdo').css('display', 'block');
+		}
+		
+		
+		
+		
+		//잔금날짜 입력시 인도일 자동설정
+		$('#gy_price_balance_date').on("change", function(){
+			$('#duration_check').prop("checked", false);
+			
+			$('#gy_delivery_date').val($(this).val());
+			$('#gy_duration_month').val("24");
+			
+			var _d = $(this).val();
+			var arr = _d.split("-");
+			var d = new Date(parseInt(arr[0]), parseInt(arr[1])-1, parseInt(arr[2]));
+			d.setMonth( d.getMonth()+24);
+			
+			var _y = d.getFullYear();
+			var _m = d.getMonth()+1;
+			var _d = d.getDate();
+			_m = (_m<10) ? "0"+_m : _m;
+			_d = (_d<10) ? "0"+_d : _d;
+			$("#gy_duration_date").datepicker( "setDate", _y+"-"+_m +"-"+_d );
+		});
+		$('#duration_check').on("click", function(){
+			var _d = $('#gy_duration_date').val();
+			if(_d==""){
+				return false;
+			}
+			var arr = _d.split("-");
+			var d = new Date(parseInt(arr[0]), parseInt(arr[1])-1, parseInt(arr[2]));
+			
+			if($(this).is(":checked")){
+				d.setDate( d.getDate()-1 );
+			}else{
+				d.setDate( d.getDate()+1 );
+			}
+			
+			var _y = d.getFullYear();
+			var _m = d.getMonth()+1;
+			var _d = d.getDate();
+			_m = (_m<10) ? "0"+_m : _m;
+			_d = (_d<10) ? "0"+_d : _d;
+			$("#gy_duration_date").datepicker( "setDate", _y+"-"+_m +"-"+_d );
+		});
+		//잔금날짜 입력시 인도일 자동설정 끝
+		
+		
+		
+		
+		//== 잔액계산
+		$('.changebalance').on("keyup change", f_changeBalance);
+		
+		var data = {"isEmpty":false,"gy_idx":"4653","gy_cate01":"01","gy_title":"부동산(다가구주택)","gy_loc":"경북 포항시 북구 우현동 123-12 체킹빌리지","gy_kind":"월세","comp_yn":"Y","fav_folder_idx":"1543","s_fav_folder_name":"하늘애","confirm_idx":"-1","gy_memo":"","cfm_comp_yn":"","gy_person_medo1_addr":"경북 포항시 북구 우현동 123-12 체킹빌리지 501호","gy_person_medo1_idno_gubun":"주민등록번호","gy_person_medo1_idno":"620504-1144587","gy_person_medo1_tel":"010-1234-5678","gy_person_medo1_name":"홍길동","gy_person_medo2_gubun":"대리인","gy_person_medo2_addr":"","gy_person_medo2_idno_gubun":"주민등록번호","gy_person_medo2_idno":"-","gy_person_medo2_tel":"","gy_person_medo2_name":"","gy_person_mesu1_addr":"경북 포항시 북구 우현동 123-12 체킹빌리지 203호","gy_person_mesu1_idno_gubun":"주민등록번호","gy_person_mesu1_idno":"910905-1127587","gy_person_mesu1_tel":"010-4321-9876","gy_person_mesu1_name":"김갑수","gy_person_mesu2_gubun":"대리인","gy_person_mesu2_addr":"","gy_person_mesu2_idno_gubun":"주민등록번호","gy_person_mesu2_idno":"-","gy_person_mesu2_tel":"","gy_person_mesu2_name":"","gy_agent1_addr":"","gy_agent1_regno":"","gy_agent1_name":"","gy_agent1_tel":"","gy_agent1_ceo":"","gy_agent2_addr":"","gy_agent2_regno":"","gy_agent2_name":"","gy_agent2_tel":"","gy_agent2_ceo":"","sts":"I","user_id_created":"dudetester","user_id_modify":"dudetester","cdate":"2019-02-07 17:00:28.0","udate":"2019-02-07 17:04:28.0","gy_price_unit":"원","gy_price_fmt":"한글+숫자","gy_special_agree1":"1) 옵션사항은 임차인 계약기간만료일까지 분실, 파손시 책임진다.\r\n2) 계약기간전 이사시 임차인은 방을 임대후 나간다 (중개수수료등은 임차인이 부담한다)\r\n3) 임대인계좌번호: 농협 311-1234-5678-90 홍길동\r\n4) 옵션사항: 에어컨, 가스렌지, 세탁기, 냉장고, TV, 책상, 의자, 침대, 서랍장\r\n5) 세대가스요금, 전기요금은 임차인이 부담한다.\r\n6) 임차인은 계약기간 만료 1개월전까지 계약의 종료 또는 연장여부를 임대인에게 통보하기로 하며 당사자간 아무의사표시없이 계약기간이 경과한 경우 자동으로 계약이 연장된 것으로 본다.\r\n\r\n","gy_special_agree2":"","gy_date":"2019-01-21","LOCATION":1,"DEAL_PRICE":2,"DEAL_PRICE_2":21,"DEAL_PRICE_3":22,"COVER_TITLE":3,"SUSURYO_RATE":4,"PERSON_TITLE_MEDO":5,"PERSON_TITLE_MESU":6,"gy_loc_dong":"","gy_loc_ho":"","gy_land_cate1":"지목","gy_land_cate2":"대","gy_land_rate":"","gy_land_share":"","gy_land_area":"","gy_bd_gujo":"철근콘크리트","gy_bd_yongdo":"다가구주택","gy_bd_area":"","gy_price_meme":"2000000","gy_price_contract":"200000","gy_price_yungja":"0","gy_price_yungja_comment":"현 상태에서 매수인이 승계함","gy_price_imdebojeung":"0","gy_price_imdebojeung_comment":"현 상태에서 매수인이 승계함","gy_price_jungdo1":"0","gy_price_jungdo1_date":"","gy_price_jungdo2":"0","gy_price_jungdo2_date":"","gy_price_balance":"1800000","gy_price_balance_date":"2019-01-21","gy_delivery_date":"2019-01-21","gy_agree_ext01":"[채무불이행과 손해배상] 매도인 또는 매수자가 본 계약상의 내용에 대하여 불이행이 있을 경우 그 상대방은 불이행한 자에 대하여 서면으로 최고하고 계약을 해제할 수 있다. 그리고 계약 당사자는 계약해제에 따른 손해배상을 각각 상대방에게 청구할 수 있으며, 손해 배상에 대하여 별도의 약정이 없는 한 계약금을 손해배상의 기준으로 본다.","gy_agree_ext02":"[중개보수] 개업공인중개사는 매도인 또는 매수인의 본 계약 불이행에 대하여 책임을 지지 않는다. 또한 중개보수는 본 계약 체결과 동시에 계약 당사자 쌍방이 각각 지불하며, 개업공인중개사의 고의나 과실없이 본 계약이 무효, 취소 또는 해제 되어도 중개보수는 지급한다. 공동 중개인 경우에 매도인과 매수인은 자신이 중개 의뢰한 개업공인중개사에게 각각 중개보수를 지급한다.","gy_agree_ext03":"[중개보수 외] 매도인 또는 매수인이 본 계약 이외의 업무를 의뢰한 경우 이에 관한 보수는 중개보수와는 별도로 지급하며 그 금액은 합의에 의한다.","gy_imdebubun":"203호 (원룸) 전부","gy_imdebubun_area":"30","gy_duration_date":"2020-01-20","gy_duration_month":"12","gy_price_chaim":"300000","gy_price_chaim_month":"0","gy_price_chaim_day":"21","gy_price_chaim_paymethod":"선불"};
+		f_initValue(data);
+		f_changePrice();
+				
+	});
+	
+	
+	//=====수정화면인 경우 초기값 셋팅
+	function f_initValue(data){
+		
+		//제목 직접입력 여부 
+		if($('#gy_title__disp').val()=="직접입력"){
+			$('#gy_title').show();	
+		}
+		
+		//공동중개 사무소 여부
+		if(data.gy_person_medo2_name!=""){
+			$('#table_medo2').show();
+		}
+		if(data.gy_person_mesu2_name!=""){
+			$('#table_mesu2').show();
+		}
+		
+		
+		
+		if(data.gy_idx!="" && data.gy_agent1_name==""){
+			$('#table_agent1').hide();
+			$('#table_agent1_btn').hide();
+		}
+		if(data.gy_agent2_name!=""){
+			$('#table_agent2').show();
+			$('#table_agent2_btn').show();
+		}
+		
+		
+		//계약서 제목
+		if(data.gy_title){
+			$('#gy_title_area').html(data.gy_title);
+		}else{
+			$('#gy_title_area').html('부동산(아파트)');
+			$('#gy_title').val('부동산(아파트)');
+		}
+		
+		
+		
+
+		
+		//매도,매수 사업자번호 처리
+		if(data.gy_person_medo1_idno_gubun=="사업자등록번호"){
+			var o = data.gy_person_medo1_idno.split("-");
+			$('#medo1_idno_3').val(o[0]);
+			$('#medo1_idno_4').val(o[1]);
+			$('#medo1_idno_5').val(o[2]);
+			$('#medo1_idno_area-1').hide();
+			$('#medo1_idno_area-2').show();
+		}else{
+			var o = data.gy_person_medo1_idno.split("-");
+			$('#medo1_idno_1').val(o[0]);
+			$('#medo1_idno_2').val(o[1]);
+		}
+		if(data.gy_person_medo2_idno_gubun=="사업자등록번호"){
+			var o = data.gy_person_medo2_idno.split("-");
+			$('#medo2_idno_3').val(o[0]);
+			$('#medo2_idno_4').val(o[1]);
+			$('#medo2_idno_5').val(o[2]);
+			$('#medo2_idno_area-1').hide();
+			$('#medo2_idno_area-2').show();
+		}else{
+			var o = data.gy_person_medo2_idno.split("-");
+			$('#medo2_idno_1').val(o[0]);
+			$('#medo2_idno_2').val(o[1]);
+		}
+		if(data.gy_person_mesu1_idno_gubun=="사업자등록번호"){
+			var o = data.gy_person_mesu1_idno.split("-");
+			$('#mesu1_idno_3').val(o[0]);
+			$('#mesu1_idno_4').val(o[1]);
+			$('#mesu1_idno_5').val(o[2]);
+			$('#mesu1_idno_area-1').hide();
+			$('#mesu1_idno_area-2').show();
+		}else{
+			var o = data.gy_person_mesu1_idno.split("-");
+			$('#mesu1_idno_1').val(o[0]);
+			$('#mesu1_idno_2').val(o[1]);
+		}
+		if(data.gy_person_mesu2_idno_gubun=="사업자등록번호"){
+			var o = data.gy_person_mesu2_idno.split("-");
+			$('#mesu2_idno_3').val(o[0]);
+			$('#mesu2_idno_4').val(o[1]);
+			$('#mesu2_idno_5').val(o[2]);
+			$('#mesu2_idno_area-1').hide();
+			$('#mesu2_idno_area-2').show();
+		}else{
+			var o = data.gy_person_mesu2_idno.split("-");
+			$('#mesu2_idno_1').val(o[0]);
+			$('#mesu2_idno_2').val(o[1]);
+		}
+		
+		
+		
+		
+		
+		
+		//날짜정보 입력
+		$('.calpopup').each(function(){
+			$(this).val(data[$(this).attr('id')]);
+		});
+		
+		
+		//quick메뉴 셋업
+		$('#quick_gy_memo').html(data.gy_memo);
+		if(data.comp_yn=="Y"){	$('#quick_gy_status').html("작성완료!!");
+		}else{ $('#quick_gy_status').html("작성중!!"); }
+		
+		if(data.cfm_comp_yn=="Y"){	$('#quick_confirm_status').html("작성완료!!");
+		}else if(data.cfm_comp_yn=="N"){	$('#quick_confirm_status').html("작성중!!");
+		}else{ $('#quick_confirm_status').html("미작성!!"); }
+		
+		if(data.s_fav_folder_name==""){	$('#quick_fav_name').html("미지정!!");
+		}else{ $('#quick_fav_name').html(data.s_fav_folder_name); }
+	}
+	
+	
+	
+	//계약서 등록
+	function f_regist(){
+		if(do_validate()){
+			//if(confirm("계약서를 등록하시겠습니까?")){
+				$('.onlynum').removeText();//숫자에서 콤마제거
+					
+				var frm = document.forms.frmRegist;
+				//frm.comp_yn.value = $('input[name=modal_chk_comp]:checked').val();
+				frm.fav_folder_idx.value = $('#modal_favorite_folder').val();
+				frm.newfolder_name.value = $('#modal_newfolder_name').val();
+				
+				frm.selAction.value = "save";
+				frm.action = "/memberGeyac.do";
+				frm.submit();
+			//}
+		}
+	}
+	
+	//계약서 수정
+	function f_modify(){
+		if(do_validate()){
+			//if(confirm("계약서를 수정하시겠습니까?")){
+				$('.onlynum').removeText();//숫자에서 콤마제거
+				
+				var frm = document.forms.frmRegist;
+				//frm.comp_yn.value = $('input[name=modal_chk_comp]:checked').val();
+				frm.fav_folder_idx.value = $('#modal_favorite_folder').val();
+				frm.newfolder_name.value = $('#modal_newfolder_name').val();
+				
+				frm.selAction.value = "save_m";
+				frm.action = "/memberGeyac.do";
+				frm.submit();
+			//}
+		}
+	}
+		
+	
+</script>
+  
+  
+</head>
+<body>
+<form name="frmMenu" method="post" target="">
+<input type="hidden" name="selAction" value=""/>
+<input type="hidden" name="gy_idx" value=""/>
+<input type="hidden" name="gy_cate01" value=""/>
+<input type="hidden" name="gy_kind" value=""/>
+<input type="hidden" name="confirm_idx" value=""/>
+<input type="hidden" name="confirm_gubun" value=""/>
+</form>
+
+
+
+
+
+<!-- Global Wrapper.s -->
+<div id="wrap">
+	<!-- 상단정보 시작 -->
+	<div id="tnb">
+		
+
+
+
+<script>
+	/**
+	 * 토큰을 삭제한다.
+	 */
+    function f_logout(){
+		/*운영*/
+        document.cookie = "_dd_token='';-1;path=/;domain=.ddhouse.co.kr;";
+        document.cookie = "_dd_token_refresh='';-1;path=/;domain=.ddhouse.co.kr;";
+        //window.location.href = "https://www.ddhouse.co.kr"; //운영의 경우 https로 이동
+
+        /*개발시*/
+        //document.cookie = "_dd_token='';-1;path=/;domain=.ddhouse.co.kr;";
+        //document.cookie = "_dd_token_refresh='';-1;path=/;domain=.ddhouse.co.kr;";
+		window.location.href = "http://www.ddhouse.co.kr";
+
+	}
+
+	function setCookie(){
+
+	}
+
+	$(function(){
+		
+	  	/* ==============
+	  	윈도우 사이즈 변경시
+	  	================*/
+	  	$(window).resize(function(){
+  			var h_hei = $(window).height();
+	  		if($("#gy_content_wrap").height()<h_hei){
+		  		$("#gy_content_wrap").height(h_hei-50);	
+	  		}
+	  		
+	  	});
+	    
+	    /* ===========
+	       로딩시 
+	    =========*/
+	    $(document).ready(function(){
+	    	
+  			var h_hei = $(window).height();
+	    	if($("#gy_content_wrap").height()<h_hei){
+		  		$("#gy_content_wrap").height(h_hei-50);
+		  		console.warn(h_hei-50);
+	  		}	    	
+	    });
+	    
+	});
+</script>
+
+	
+<div style="position:relative;">
+	<!-- <a class="logo" style="padding-left:20px" href="/"><img src="/img/logo.jpg" style="height:100%;"/></a> -->
+	<div style="text-align:left; line-height:50px; font-size:14px; font-weight:bold; color:white; padding-left:10px;">
+    <span style="font-size:20px; padding:0 10px;">MBC</span>공인중개사무소 <span style="padding-left:8px;">계약 관리시스템</span>
+    
+    <!-- 디자인 변경 -->
+		<span class="beta-warn">베타기간 동안에는 현재 계약서 시스템에서 등록,수정한 정보는 반영되지 않습니다.</span>
+	</div>
+	
+	
+	
+	
+    
+	<span style="padding-right:10px; font-size:12px; letter-spacing:1px; word-spacing:7px; position: absolute; right: 0; top:13px; color: white;">
+		<span style="margin-right:20px"><span style="font-weight:bold">디디상담원A님</span> 환영합니다.</span>
+		<a href="javascript: f_logout()">로그아웃</a>
+	</span>
+</div>
+	
+	</div>
+	<!-- 상단정보 끝-->
+
+	
+	
+	
+	<!-- 컨테이너 시작 -->
+	<div id="gy_container">
+		<!-- 메뉴 시작 -->
+		
+
+
+
+
+
+
+
+<script type="text/javascript" src="/jsp/member/geyac/js/jstree.min.js"></script>    
+<script>
+
+$(document).ready(function(){
+	/* 왼쪽 메뉴 트리 ---- */
+	$('#jstree_gy').jstree();
+	$('#jstree_gy_fav').jstree();
+	$('#jstree_gy, #jstree_gy_fav').on("changed.jstree", function(e, data) {
+		var _json = JSON.parse(data.selected);
+		f_goGyList(_json.gy_cate01,_json.gy_kind, _json.fav_folder_idx);
+	});
+	
+	
+	
+	$('#jstree_cust').jstree();
+	$('#jstree_cust_fav').jstree();
+	$('#jstree_cust, #jstree_cust_fav').on("changed.jstree", function(e, data) {
+		var _json = JSON.parse(data.selected);
+		f_goGyCustomerList(_json.gy_rel_yn, _json.cust_folder_idx);
+	});
+	
+	
+	
+	$('#jstree_cal').jstree();
+	$('#jstree_cal').on("changed.jstree", function(e, data) {
+		alert("준비중입니다");
+	});
+	
+	
+	/* --- 트리끝 */
+	
+	
+	$('#jstree_gy').jstree("open_all");
+    
+});
+
+
+
+//계약서목록으로 이동
+function f_goGyList(i_cate01, i_kind, i_folder){
+	var frm = document.forms.frmLeftMenu;
+	frm.selAction.value = "V";
+	
+	//추후 목록화면(jsp)를 계약서구분해서 나눌 경우..
+	//if(i_cate01) frm.gy_cate01.value = i_cate01;
+	if(i_cate01) frm.selGyCate01.value = i_cate01;
+	if(i_kind) frm.selGyKind.value = i_kind;
+	if(i_folder) frm.selFavFolderIdx.value = i_folder;
+	
+	frm.action = "/memberGeyacList.do";
+	frm.submit();
+}
+
+
+//고객목록으로 이동
+function f_goGyCustomerList(i_gyRelYn, i_folder){
+	var frm = document.forms.frmLeftMenu;
+	frm.selAction.value = "V";
+	if(i_gyRelYn) frm.selGyRelYn.value = i_gyRelYn;
+	if(i_folder) frm.selCustFolderIdx.value = i_folder;
+	
+	
+	frm.action = "/memberGeyacCustomer.do";
+	frm.submit();
+}
+
+
+//폴더관리
+function f_folderConfig(i_gbn){
+	var frm = document.forms.frmLeftMenu;
+	frm.selAction.value = "folder";
+	if(i_gbn){
+		frm.folder_gubun.value = i_gbn;
+	}
+	
+	frm.action = "/memberGeyacConfig.do";
+	frm.submit();
+}
+
+</script>
+<form name="frmLeftMenu" method="post" target="">
+<input type="hidden" name="selAction" value=""/>
+<input type="hidden" name="selGyCate01" value=""/>
+<input type="hidden" name="selGyKind" value=""/>
+<input type="hidden" name="selGyRelYn" value=""/>
+<input type="hidden" name="selFavFolderIdx" value=""/>
+<input type="hidden" name="selCustFolderIdx" value=""/>
+<input type="hidden" name="folder_gubun" value="GY"/>
+</form>
+
+
+<form name="frmPrint" method="post" target="">
+<input type="hidden" name="selAction" value=""/>
+<input type="hidden" name="gy_cate01" value=""/>
+<input type="hidden" name="gy_idx" value=""/>
+<input type="hidden" name="print_cover" value=""/>
+<input type="hidden" name="print_geyac" value=""/>
+<input type="hidden" name="print_confirm" value=""/>
+<input type="hidden" name="print_privacy" value=""/>
+</form>
+    
+<div id="lmenu">
+			
+			
+			<div class="lmenu_wrap">
+			
+				<!-- 메뉴 #1. 계약서 -->
+				<div class="mtitle">계약서</div>
+				<div class="tree_wrap">
+					<div class="tree_container">
+					  <div>
+					  	<a href="javascript: f_goGyList()">전체보기(7)</a>
+					  </div>
+					  <div id="jstree_gy">
+					    <ul>
+					      <li id='{"gy_cate01":"01", "gy_kind":""}' class="">부동산(7)
+					        <ul>
+					          <li id='{"gy_cate01":"01", "gy_kind":"매매"}'>매매<span style="font-size:12px">(0)</span></li>
+					          <li id='{"gy_cate01":"01", "gy_kind":"전세"}'>전세(0)</li>
+					          <li id='{"gy_cate01":"01", "gy_kind":"월세"}'>월세(7)</li>
+					          <li id='{"gy_cate01":"01", "gy_kind":"연세"}'>연세(0)</li>
+					        </ul>
+					      </li>
+					      <li id='{"gy_cate01":"02", "gy_kind":""}'>분양권(0)</li>
+					      <li id='{"gy_cate01":"03", "gy_kind":""}'>권리양도양수(0)</li>
+					      <li id='{"gy_cate01":"04", "gy_kind":""}'>표준임대차계약서(0)</li>
+					      <li id='{"gy_cate01":"05", "gy_kind":""}'>상가권리금계약서(0)</li>
+					      <li id='{"gy_cate01":"06", "gy_kind":""}'>상가임대차계약서(0)</li>
+					    </ul>
+					  </div>
+					</div>
+					
+					
+					<div class="tree_container">
+					  <div>
+					  	즐겨찾기 
+					  	<a style="float:right;" href="javascript: f_folderConfig('GY')"><img src="/img/icon/icon_config.png" style="width:15px; height:15px;margin-top: -5px;"/> 설정</a>
+					  </div>
+					  <div id="jstree_gy_fav">
+					    <ul>
+					    	
+					      	<li  id='{"gy_cate01":"", "gy_kind":"", "fav_folder_idx":"1543"}' class="">하늘애(7)</li>
+					      	
+					    </ul>
+					  </div>
+					</div>
+					
+				</div>
+				<!-- 메뉴 #1. 계약서  끝-->
+
+				
+				<!-- 메뉴 #3. 고객관리 -->
+				<div class="mtitle">계약 정보</div>
+				<div class="tree_wrap">
+					<!-- 기본트리 -->
+					<div class="tree_container">
+					  <div>
+						  <a href="/memberGeyacCal.do">계약서 일정</a><br/>
+						  <a href="javascript: f_goGyCustomerList()">계약서 고객</a>
+					  </div>
+					  
+					</div>
+					<!-- 기본트리 끝 -->
+					<!-- 즐겨찾기 -->
+					
+					<!-- 즐겨찾기 끝-->
+				</div>
+				<!-- 메뉴 #3. 고객관리 -->
+
+				
+
+				
+				<!-- 메뉴 #2. 일정관리 -->
+				<!-- <div class="mtitle">일정관리</div>
+				<div class="tree_wrap">
+					<div class="tree_container">
+					  <div>
+					  	전체보기
+					  </div>
+					  <div id="jstree_cal">
+					    <ul>
+					      <li>분양일정</li>
+					      <li>계약만기일정</li>
+					      <li>중개사무소일정
+					        <ul>
+					          <li id="">술자리</li>
+					          <li id="">모임</li>
+					          <li id="">휴가</li>
+					        </ul>
+					      </li>
+					    </ul>
+					  </div>
+					</div>
+				</div> -->
+				<!-- 메뉴 #2. 일정관리 -->
+
+				
+				
+			</div>
+		</div>
+		<!-- 메뉴 끝  -->
+		
+		
+	 	<div id="gy_content_wrap">
+	 	
+	 		<div class="content_top">
+	 			<div class="content_top_title">
+					<h1>계약서 작성 :: 부동산</h1>
+					<p style="float:left; padding-left:30px; margin-top:-5px;"><a href="javascript: f_goRegist()" class="btn-search">신규 계약서 작성</a><p>
+					<br style="clear:both"/>
+	 			</div>
+			</div>
+			
+			<div style="width:1100px; margin:0 auto"> <!-- 900 + 180 + 패딩 -->
+	 		
+			<!-- 등록폼 틀(rform) -->
+			<div class="rform">
+			<form name="frmRegist" method="post" target="">
+			<input type="hidden" name="selAction" value=""/>
+			<input type="hidden" id="comp_yn" name="comp_yn" value="Y"/>
+			<input type="hidden" id="fav_folder_idx" name="fav_folder_idx" value="1543"/>
+			<input type="hidden" id="newfolder_name" name="newfolder_name" value=""/>
+			<input type="hidden" id="confirm_idx" name="confirm_idx" value="-1"/>
+			<input type="hidden" id="gy_memo" name="gy_memo" value=""/>
+			<input type="hidden" id="gy_idx" name="gy_idx" value="4653"/>
+			
+				<!-- 상단 선택박스 시작-->
+				<div class="rform_top">
+					<div>
+						<p>
+							<span class="title">계약서 종류</span>
+							<select id="gy_cate01" name="gy_cate01" onchange="javascript: f_change_cate(this)">
+								<option value="01" selected>부동산</option>
+								<option value="02">분양권</option>
+								<option value="03">권리양도양수</option>
+								<option value="04">표준임대차계약서</option>
+								<option value="05">상가권리금계약서</option>
+								<option value="06">상가임대차계약서</option>
+							</select>
+							
+							<select id="gy_title__disp">
+								<option value="부동산(아파트)" >부동산(아파트)</option><option value="부동산(주상복합)" >부동산(주상복합)</option><option value="부동산(연립주택)" >부동산(연립주택)</option><option value="부동산(다세대주택)" >부동산(다세대주택)</option><option value="부동산(다가구주택)"  selected >부동산(다가구주택)</option><option value="부동산(다중주택)" >부동산(다중주택)</option><option value="부동산(도시형생활주택)" >부동산(도시형생활주택)</option><option value="부동산(주택)" >부동산(주택)</option><option value="부동산(오피스텔)" >부동산(오피스텔)</option><option value="부동산(원룸)" >부동산(원룸)</option><option value="부동산(상가)" >부동산(상가)</option><option value="부동산(상가주택)" >부동산(상가주택)</option><option value="부동산(상가건물)" >부동산(상가건물)</option><option value="부동산(사무실)" >부동산(사무실)</option><option value="부동산(토지)" >부동산(토지)</option><option value="부동산(공장)" >부동산(공장)</option><option value="부동산" >부동산</option><option value="직접입력" >직접입력</option>
+							</select>
+							<input type="text" id="gy_title" name="gy_title" value="부동산(다가구주택)" style="width:200px; display:none" maxlength="50"/> 
+							
+							<select id="gy_kind" name="gy_kind" onchange="javascript: f_change_kind(this)">
+								<option value="매매" >매매</option><option value="전세" >전세</option><option value="월세"  selected >월세</option><option value="연세" >연세</option>
+							</select>
+							
+							
+							<span style="float:right; padding-left:20px">
+								<a href="javascript: f_deleteGeyac()" class="btn-search" style="cursor:pointer; width:100px">계약서 삭제</a>
+								<a href="javascript: f_copyGeyac()" class="btn-search" style="cursor:pointer; width:100px">계약서 복사</a>
+							</span>
+							
+						</p>
+						<p>
+              
+              <!-- 디자인 변경 -->
+							<span style="float:right;"><span style="color:tomato; margin-right: 8px;">※ 현재 작성된 확인설명서가 없습니다. </span><a class="btn-search" id="confirm_btn" style="cursor:pointer; width:100px">확인설명서 작성</a></span>
+							
+						</p>
+					</div>
+				</div>
+				<!-- 상단 선택박스 끝-->
+				
+
+				<!-- 계약서 본문(rform_body) 시작-->				
+				<div id="rform_body">
+					<div class="main_title">
+						<span id="gy_title_area">부동산(아파트)</span>
+						<span class="gy_form_m">매매</span><span class="gy_form_j">전세</span><span class="gy_form_w">월세</span><span class="gy_form_y">연세</span> 
+						계약서 
+					</div>
+					<p class="main_title_desc gy_form_m">매도인과 매수인 쌍방은 아래 표시 부동산에 관하여 다음 내용과 같이 매매계약을 체결한다.</p>
+					<p class="main_title_desc gy_form_j gy_form_w gy_form_y">임차인과 임대인 쌍방은 아래 표시 부동산에 관하여 다음 내용과 같이 임대차계약을 체결한다.</p>
+					
+					
+					
+					<div class="body">
+						<p class="title">1. 부동산의 표시</p>
+						<table id="table_01">
+							<tr>
+								<th><a href="javascript: f_callDaumAddr('gy_loc', 'gy_loc_dong', true)" class="btn" >소재지</a></th>
+								<td colspan="8">
+									<input type="text" id="gy_loc" name="gy_loc" value="경북 포항시 북구 우현동 123-12 체킹빌리지" style="width:540px" maxlength="50">
+									<input type="text" id="gy_loc_dong" name="gy_loc_dong" value="" class="ta_center" style="width:60px" maxlength="10">동 
+									<input type="text" id="gy_loc_ho" name="gy_loc_ho" value="" class="ta_center" style="width:60px" maxlength="10">호
+								</td>
+							</tr>
+							
+							<tr>
+								<th style="width:70px">토지</th>
+								<th style="width:80px">
+									<select id="gy_land_cate1" name="gy_land_cate1">
+										<option value="지목"  selected >지목</option><option value="대표지목" >대표지목</option>
+									</select>
+								</th>
+								<td style="width:140px">
+									<select id="gy_land_cate2" name="gy_land_cate2">
+										<option value="대"  selected >대</option><option value="전" >전</option><option value="답" >답</option><option value="임야" >임야</option><option value="공원" >공원</option><option value="공원용지" >공원용지</option><option value="공장용지" >공장용지</option><option value="과수원" >과수원</option><option value="광천지" >광천지</option><option value="구거" >구거</option><option value="도로" >도로</option><option value="목장용지" >목장용지</option><option value="종교용지" >종교용지</option><option value="묘지" >묘지</option><option value="사적지" >사적지</option><option value="수도용지" >수도용지</option><option value="양어장" >양어장</option><option value="염전" >염전</option><option value="유원지" >유원지</option><option value="잡종지" >잡종지</option><option value="제방" >제방</option><option value="주유소용지" >주유소용지</option><option value="창고용지" >창고용지</option><option value="철도용지" >철도용지</option><option value="체육용지" >체육용지</option><option value="하천" >하천</option><option value="학교용지" >학교용지</option><option value="기타" >기타</option>
+									</select>
+								</td>
+								<th style="width:40px">면적</th>
+								<td style="width:140px" colspan="3"><input type="text" id="gy_land_area" name="gy_land_area" value="" class="onlynumfloat" style="width:100px" maxlength="10"/>㎡</td> 
+								<th style="width:60px; font-size:11px; padding:0 1px">대지권비율</th>
+								<td>
+									<input type="text" id="gy_land_rate" name="gy_land_rate" value="" style="width:50px" maxlength="10"/>분의
+									<input type="text" id="gy_land_share" name="gy_land_share" value="" style="width:50px" maxlength="10"/>
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th>건물</th>
+								<th>구조</th>
+								<td>
+									<select id="gy_bd_gujo" name="gy_bd_gujo">
+										<option value="철근콘크리트"  selected >철근콘크리트</option><option value="철근콘크리트구조" >철근콘크리트구조</option><option value="목조" >목조</option><option value="시멘트벽돌조" >시멘트벽돌조</option><option value="시멘트블럭조" >시멘트블럭조</option><option value="철골조" >철골조</option><option value="연와조" >연와조</option><option value="석조" >석조</option><option value="흙벽돌조" >흙벽돌조</option><option value="철파이프조" >철파이프조</option><option value="석회조" >석회조</option><option value="통나무" >통나무</option><option value="목조" >목조</option><option value="조립식" >조립식</option><option value="스틸" >스틸</option><option value="한옥" >한옥</option><option value="없음" >없음</option><option value="직접입력" >직접입력</option>
+									</select>
+									
+									<span id="area-text--gy_bd_gujo" style="display:none; margin-top:5px; width:98%;">
+										<input type="text" id="gy_bd_gujo__text" name="gy_bd_gujo__text" value="철근콘크리트"/>
+									</span>
+								</td>
+								<th>용도</th>
+								<td colspan="3">
+
+                  <!-- 디자인 변경 -->
+									<select id="gy_bd_yongdo" name="gy_bd_yongdo" style="width:120px">
+										<option value="아파트" >아파트</option><option value="단독주택" >단독주택</option><option value="연립주택" >연립주택</option><option value="다세대주택" >다세대주택</option><option value="다가구주택"  selected >다가구주택</option><option value="공동주택" >공동주택</option><option value="주거용" >주거용</option><option value="비주거용" >비주거용</option><option value="업무용" >업무용</option><option value="상업용" >상업용</option><option value="공업용" >공업용</option><option value="없음" >없음</option><option value="직접입력" >직접입력</option>
+									</select>
+									<span class="comment">"대장"상의 주용도 기입</span>
+									
+									<span id="area-text--gy_bd_yongdo" style="display:none; margin-top:5px; width:98%;">
+										<input type="text" id="gy_bd_yongdo__text" name="gy_bd_yongdo__text" value="다가구주택"/>
+									</span>
+								</td>
+								<th>면적</th>
+								<td><input type="text" id="gy_bd_area" name="gy_bd_area" value="" class="onlynumfloat" style="width:100px" maxlength="10"/>㎡</td> 
+							</tr>
+							
+							<tr class="gy_form_j gy_form_w gy_form_y" style="display:none">
+								<th>임대할부분</th>
+								<td colspan="6">
+									<input type="text" id="gy_imdebubun" name="gy_imdebubun" value="203호 (원룸) 전부" maxlength="40"/>
+								</td>
+								<th>면적</th>
+								<td><input type="text" id="gy_imdebubun_area" name="gy_imdebubun_area" value="30" class="onlynumfloat" style="width:100px" maxlength="10"/>㎡</td> 
+							</tr>
+							
+	                    </table>
+	                    
+	                    
+
+	                    
+	                    <!-- 코멘트 영역 -->
+						<div style="position:relative;">
+	                    	<div class="price_display">
+	                    		금액표시 
+	                    		<select id="gy_price_fmt" name="gy_price_fmt" style="height: 23px;">
+	                    			<option value="한글" >한글</option><option value="숫자" >숫자</option><option value="한자" >한자</option><option value="한글+숫자"  selected >한글+숫자</option>
+	                    		</select>
+	                    		금액단위
+	                    		<select id="gy_price_unit" name="gy_price_unit" style="height: 23px;">
+	                    			<option value="만원" >만원</option><option value="천원" >천원</option><option value="원"  selected >원</option>
+	                    		</select>
+	                    	</div>
+	                    </div>
+	                    <!-- 코멘트 영역 -->
+	                    
+	                    
+		                <p class="title">2. 계약내용</p>
+	                    <div class="noitem b600">
+							<label>제 1 조</label>						
+			                <p class="gy_form_m">위 부동산의 매매에 대하여 매도인과 매수인은 합의에 의하여 매매대금을 아래와 같이 지불하기로 한다.</p>
+			                <p class="gy_form_j gy_form_w gy_form_y">위 부동산의 임대차에 대하여 임대인과 임차인은 합의에 의하여 임차보증금 및 차임을 아래와 같이 지불하기로 한다.</p>
+						</div>	  
+						
+						
+
+						<table id="table_02">
+							<tr>
+								<th style="width:85px"><span class="gy_form_m">매매대금</span><span class="gy_form_j gy_form_w gy_form_y">보증금</span></th>
+								<td>
+									一 金 <input type="text" id="gy_price_meme__disp" class="onlynum changeprice changebalance" value="2000000" style="width:310px" maxlength="30" /> 원정
+									( &#92; <input type="text" id="gy_price_meme" name="gy_price_meme" value="2000000" class="onlynum" style="background-color:#eeeeee; border:1px solid gray; width:180px;" tabIndex="-1" readonly/> )
+								</td>
+							</tr>
+							<tr>
+								<th>계약금</th>
+								<td>
+									<input type="hidden" id="gy_price_contract" name="gy_price_contract" class="onlynum" value="200000"/>
+									一 金 <input type="text" id="gy_price_contract__disp" class="onlynum changeprice changebalance" value="200000" style="width:310px" maxlength="30" /> 원정은 계약시에 지불하고 영수함.
+									&nbsp;&nbsp;&nbsp;영수자(<span style="padding:0 12px; color:gray">자필서명</span>) (인)
+								</td>
+							</tr>
+							<tr class="gy_form_m">
+								<th>융자금</th>
+								<td> 
+									<input type="hidden" id="gy_price_yungja" name="gy_price_yungja" class="onlynum" value="0"/>
+									一 金 <input type="text" id="gy_price_yungja__disp" class="onlynum changeprice changebalance" value="0" style="width:310px" maxlength="30" /> 원정은 &nbsp;
+									<select id="gy_price_yungja_comment" name="gy_price_yungja_comment" class="changebalance" style="width:240px">
+	                    				<option value="현 상태에서 매수인이 승계함"  selected >현 상태에서 매수인이 승계함</option><option value="매도인이 잔금지급일까지 말소한다." >매도인이 잔금지급일까지 말소한다.</option><option value="특약사항에 별도 명시한다." >특약사항에 별도 명시한다.</option><option value="매수인이 인수한다." >매수인이 인수한다.</option><option value="매수인이 인수하지 아니한다." >매수인이 인수하지 아니한다.</option>
+	                                </select>
+                                </td>
+							</tr>
+							<tr class="gy_form_m">
+								<th>현 임대보증금</th>
+								<td> 
+									<input type="hidden" id="gy_price_imdebojeung" name="gy_price_imdebojeung" class="onlynum" value="0"/>
+									一 金 <input type="text" id="gy_price_imdebojeung__disp" class="onlynum changeprice changebalance" value="0" style="width:310px" maxlength="30" /> 원정은 &nbsp;
+									<select id="gy_price_imdebojeung_comment" name="gy_price_imdebojeung_comment" class="changebalance" style="width:240px">
+	                    				<option value="현 상태에서 매수인이 승계함"  selected >현 상태에서 매수인이 승계함</option><option value="매도인이 잔금지급일까지 말소한다." >매도인이 잔금지급일까지 말소한다.</option><option value="특약사항에 별도 명시한다." >특약사항에 별도 명시한다.</option><option value="매수인이 인수한다." >매수인이 인수한다.</option><option value="매수인이 인수하지 아니한다." >매수인이 인수하지 아니한다.</option>
+	                                </select>
+                                </td>
+							</tr>
+							<tr>
+								<th rowspan="2" style="vertical-align: middle;">중도금</th>
+								<td>
+									<input type="hidden" id="gy_price_jungdo1" name="gy_price_jungdo1" class="onlynum" value="0"/>
+									一 金 <input type="text" id="gy_price_jungdo1__disp" class="onlynum changeprice changebalance" value="0" style="width:310px" maxlength="30" /> 원정은 &nbsp;
+									<input type="text" id="gy_price_jungdo1_date" name="gy_price_jungdo1_date" value="" class="calpopup" style="width:85px;" readonly/> 일에 지불한다.
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<input type="hidden" id="gy_price_jungdo2" name="gy_price_jungdo2" class="onlynum" value="0"/>
+									一 金 <input type="text" id="gy_price_jungdo2__disp" class="onlynum changeprice changebalance" value="0" style="width:310px" maxlength="30" /> 원정은 &nbsp;
+									<input type="text" id="gy_price_jungdo2_date" name="gy_price_jungdo2_date" value="" class="calpopup" style="width:85px;"/> 일에 지불한다.
+								</td>
+							</tr>
+							<tr>
+								<th>잔금</th>
+								<td>
+									<input type="hidden" id="gy_price_balance" name="gy_price_balance" class="onlynum" value="1800000"/>
+									一 金 <input type="text" id="gy_price_balance__disp" class="onlynum changeprice" value="1800000" style="background-color:#eeeeee; border:1px solid gray; width:312px" tabIndex="-1" readonly/> 원정은 &nbsp;
+									<input type="text" id="gy_price_balance_date" name="gy_price_balance_date" value="2019-01-21" class="calpopup" style="width:85px;"/> 일에 지불한다.
+								</td>
+							</tr>
+							
+							
+							<tr class="gy_form_w gy_form_y">
+								<th>차임</th>
+								<td>
+									<input type="hidden" id="gy_price_chaim" name="gy_price_chaim" class="onlynum" value="300000" />
+									一 金 <input type="text" id="gy_price_chaim__disp" class="onlynum changeprice" value="300000" style="width:310px" maxlength="30"/> 원정은 &nbsp;
+									
+									매월 
+									
+									 
+									<select name="gy_price_chaim_day" style="width:55px;">
+										<option value="없음" >없음</option><option value="1" >1</option><option value="2" >2</option><option value="3" >3</option><option value="4" >4</option><option value="5" >5</option><option value="6" >6</option><option value="7" >7</option><option value="8" >8</option><option value="9" >9</option><option value="10" >10</option><option value="11" >11</option><option value="12" >12</option><option value="13" >13</option><option value="14" >14</option><option value="15" >15</option><option value="16" >16</option><option value="17" >17</option><option value="18" >18</option><option value="19" >19</option><option value="20" >20</option><option value="21"  selected >21</option><option value="22" >22</option><option value="23" >23</option><option value="24" >24</option><option value="25" >25</option><option value="26" >26</option><option value="27" >27</option><option value="28" >28</option><option value="29" >29</option><option value="30" >30</option><option value="31" >31</option><option value="末일" >末일</option>
+									</select> 일  &nbsp;
+									<select name="gy_price_chaim_paymethod" style="width:75px;">
+										<option value="없음" >없음</option><option value="선불"  selected >선불</option><option value="후불" >후불</option>
+									</select> 로 지불한다.
+								</td>
+							</tr>
+	                    </table>
+	                    
+	                    
+						
+						<div class="noitem" style="margin-top:15px;">
+							<label>제2조</label>
+							
+			                <p>[존속기간] 임대인은 위 부동산을 임대차 목적대로 사용할 수 있는 상태로 <input type="text" id="gy_delivery_date" name="gy_delivery_date" value="2019-01-21" class="calpopup" style="width:85px; line-height: 22px;"/> 일까지 임차인에게 인도하며,  
+			                	<br/>임대차 기간은 인도일로부터 <input type="text" id="gy_duration_date" name="gy_duration_date" value="2020-01-20" class="calpopup" style="width:85px; line-height: 22px;"/>일 
+			                	(  <input type="text" id="gy_duration_month" name="gy_duration_month" value="12" class="onlynum calduration" style="width:40px; text-align:center;" maxlength="2" />개월)까지로 한다.
+								&nbsp;&nbsp;<input type="checkbox" id="duration_check">초일불산입 적용</p>
+			                
+			                
+			                <!-- 코멘트 영역(약정사항 보기) -->
+	                    	<div class="price_display" style="top:25px;">
+	                    		<label style="cursor:pointer;"><input type="checkbox" id="toggle_hidden_item" />약정사항 보기</label> 
+	                    	</div>
+		                    <!-- 코멘트 영역(약정사항 보기) 끝 -->
+						</div>	 
+						
+	                             
+	                    <!-- 약정사항 include -->
+	                    
+
+<div class="gy_form_m">
+					    <div class="noitem hidden_item">
+							<label>제3조</label>						
+			                <p> [제한물권 등의 소멸] 매도인은 위 부동산에 설정된 저당권, 지상권, 임차권 등 소유권의 행사를 제한하는 사유가 있거나,
+			                	<br/>제세공과 기타 부담금의 미납금 등이 있을때에는 잔금 수수일까지 그 권리의 하자 및 부담 등을 제거하여 완전한
+			                	<br/>소유권을 매수인에게 이전한다. 다만, 승계하기로 합의하는 권리 및 금액은 그러하지 아니하다.</p>
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제4조</label>						
+			                <p>[지방세 등] 위 부동산에 관하여 발생한 수익의 귀속과 제세공과금 등의 부담은 위 부동산의 인도일을 기준으로 하되,
+			                	<br/>지방세의 납부의무 및 납부책임은 지방세법의 규정에 의한다.</p>
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제5조</label>						
+			                <p>[계약의 해제] 매수인이 매도인에게 중도금(중도금이 없을때에는 잔금)을 지불하기까지 매도인은 계약금의 배액을
+			                	<br/>상환하고, 매수인은 계약금을 포기하고 본 계약을 해제할 수 있다.</p>
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제6조</label>						
+			                <p style="border:1px solid gray; font-size: 13px; width:780px;"><textarea id="gy_agree_ext01" name="gy_agree_ext01" style="width:98%; height:48px; border:none">[채무불이행과 손해배상] 매도인 또는 매수자가 본 계약상의 내용에 대하여 불이행이 있을 경우 그 상대방은 불이행한 자에 대하여 서면으로 최고하고 계약을 해제할 수 있다. 그리고 계약 당사자는 계약해제에 따른 손해배상을 각각 상대방에게 청구할 수 있으며, 손해 배상에 대하여 별도의 약정이 없는 한 계약금을 손해배상의 기준으로 본다.</textarea></p>
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제7조</label>						
+			                <p style="border:1px solid gray; font-size: 13px; width:780px;"><textarea id="gy_agree_ext02" name="gy_agree_ext02" style="width:98%; height:60px; border:none">[중개보수] 개업공인중개사는 매도인 또는 매수인의 본 계약 불이행에 대하여 책임을 지지 않는다. 또한 중개보수는 본 계약 체결과 동시에 계약 당사자 쌍방이 각각 지불하며, 개업공인중개사의 고의나 과실없이 본 계약이 무효, 취소 또는 해제 되어도 중개보수는 지급한다. 공동 중개인 경우에 매도인과 매수인은 자신이 중개 의뢰한 개업공인중개사에게 각각 중개보수를 지급한다.</textarea></p>
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제8조</label>						
+			                <p style="border:1px solid gray; font-size: 13px; width:780px;"><textarea id="gy_agree_ext03" name="gy_agree_ext03" style="width:98%; height:32px; border:none">[중개보수 외] 매도인 또는 매수인이 본 계약 이외의 업무를 의뢰한 경우 이에 관한 보수는 중개보수와는 별도로 지급하며 그 금액은 합의에 의한다.</textarea></p>
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제9조</label>						
+			                <p>[중개대상물 확인설명서 교부 등] 중개업자는 중개대상확인설명서를 작성하고 업무보증관계증서(공제증서 등) 사본을 첨부하여 계약체결과 동시에 거래당사자 쌍방에게 교부한다.</p>
+			            </div>
+</div>
+
+
+
+
+
+
+<div class="gy_form_j gy_form_y">
+			            <div class="noitem hidden_item">
+							<label>제3조</label>						
+			                <p> [용도변경 및 전대 등] 임차인은 임대인의 동의없이 위 부동산의 용도나 구조를 변경하거나 전대, 임차권 양도 또는
+			                	<br/>담보제공을 하지 못하며 임대차 목적 이외의 용도로 사용할 수 없다. </p>
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제4조</label>						
+			                <p>[계약의 해지] 임차인이 제 3조를 위반하였을 때 임대인은 즉시 본 계약을 해지 할 수 있다.</p>
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제5조</label>						
+			                <p>[계약의 종료] 임대차계약이 종료된 경우에 임차인은 위 부동산을 원상으로 회복하여 임대인에게 반환한다. 이러한 
+			                	<br/>경우 임대인은 보증금을 임차인에게 반환하고, 연체 임대료 또는 손해배상금이 있을 때는 이들을 제하고 그 잔액을 반환한다.</p>
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제6조</label>						
+			                <p>[계약의 해제] 임차인이 임대인에게 중도금 (중도금이 없을 때는 잔금)을 지불하기 전까지, 임대인은 계약금의 
+			                	<br/>배액을 상환하고, 임차인은 계약금을 포기하고 이 계약을 해제할 수 있다.</p>
+			            </div>
+                        <div class="noitem hidden_item">
+							<label>제7조</label>						
+			                <p>[채무불이행과 손해배상] 임대인 또는 임차인이 본 계약상의 내용에 대하여 불이행이 있을 경우 그 상대방은 불이행 
+			                	<br/>한 자에 대하여 서면으로 최고하고 계약을 해제할 수 있다. 이 경우 계약 당사자는 계약해제에 따른 손해배상을
+			                	<br/>각각 상대방에 대하여 청구 할 수 있으며, 손해배상에 대하여 별도의 약정이 없는 한 계약금을 손해배상의 기준으로 본다.</p>
+			            </div>
+                        <div class="noitem hidden_item">
+							<label>제8조</label>						
+			                <p>[중개보수 외] 개업공인중개사는 임대인과 임차인이 본 계약을 불이행 함으로 인한 책임을 지지 않는다. 또한 (중개보수는) 
+			                	<br/>본 계약 체결과 동시에 계약 당사자 쌍방이 각각 지불하며, 개업공인중개사의 고의나 과실없이 본 계약이 무효, 취소 또는 
+			                	<br/>해약되어도 중개보수는 지급한다. 공동중개인 경우에 임대인과 임차인은 자신이 중개 의뢰한 개업공인중개사에게 각각
+			                	<br/>중개보수를 지급한다.</p>
+			            </div>
+                        <div class="noitem hidden_item">
+							<label>제9조</label>						
+			                <p>[중개대상물 확인설명서 교부 등] 개업공인중개사는 중개대상 확인설명서를 작성하고 업무보증관계증서(공제증서 등) 
+			                	<br/>사본을 첨부하여 계약체결과 동시에 거래당사자 쌍방에게 교부한다.</p>
+			            </div>
+</div>
+
+
+
+
+<div class="gy_form_w">
+			            <div class="noitem hidden_item">
+							<label>제3조</label>						
+			                <p> [용도변경 및 전대 등] 임차인은 임대인의 동의없이 위 부동산의 용도나 구조를 변경하거나 전대, 임차권 양도 또는
+			                	<br/>담보제공을 하지 못하며 임대차 목적 이외의 용도로 사용할 수 없다. </p>
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제4조</label>
+							
+			                <p>[계약의 해지] 임차인의 차임연체액이 2기의 차임액에 달하거나 제3조를 위반하였을 때 임대인은 즉시 본 계약을 해지할 수 있다.</p>
+			                
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제5조</label>						
+			                <p>[계약의 종료] 임대차계약이 종료된 경우에 임차인은 위 부동산을 원상으로 회복하여 임대인에게 반환한다. 이러한 
+			                	<br/>경우 임대인은 보증금을 임차인에게 반환하고, 연체 임대료 또는 손해배상금이 있을 때는 이들을 제하고 그 잔액을 반환한다.</p>
+			            </div>	
+                        <div class="noitem hidden_item">
+							<label>제6조</label>						
+			                <p>[계약의 해제] 임차인이 임대인에게 중도금 (중도금이 없을 때는 잔금)을 지불하기 전까지, 임대인은 계약금의 
+			                	<br/>배액을 상환하고, 임차인은 계약금을 포기하고 이 계약을 해제할 수 있다.</p>
+			            </div>
+                        <div class="noitem hidden_item">
+							<label>제7조</label>						
+			                <p>[채무불이행과 손해배상] 임대인 또는 임차인이 본 계약상의 내용에 대하여 불이행이 있을 경우 그 상대방은 불이행 
+			                	<br/>한 자에 대하여 서면으로 최고하고 계약을 해제할 수 있다. 이 경우 계약 당사자는 계약해제에 따른 손해배상을
+			                	<br/>각각 상대방에 대하여 청구 할 수 있으며, 손해배상에 대하여 별도의 약정이 없는 한 계약금을 손해배상의 기준으로 본다.</p>
+			            </div>
+                        <div class="noitem hidden_item">
+							<label>제8조</label>						
+			                <p>[중개보수] 개업공인중개사는 임대인과 임차인이 본 계약을 불이행 함으로 인한 책임을 지지 않는다. 또한 중개보수는 
+			                	<br/>본 계약 체결과 동시에 계약 당사자 쌍방이 각각 지불하며, 개업공인중개사의 고의나 과실없이 본 계약이 무효, 취소 또는 
+			                	<br/>해약되어도 중개보수는 지급한다. 공동중개인 경우에 임대인과 임차인은 자신이 중개 의뢰한 개업공인중개사에게 각각
+			                	<br/>중개보수를 지급한다.</p>
+			            </div>
+                        <div class="noitem hidden_item">
+							<label>제9조</label>						
+			                <p>[중개대상물 확인설명서 교부 등] 개업공인중개사는 중개대상 확인설명서를 작성하고 업무보증관계증서(공제증서 등) 
+			                	<br/>사본을 첨부하여 계약체결과 동시에 거래당사자 쌍방에게 교부한다.</p>
+			            </div>
+</div>
+
+
+	                    
+	                    <!-- 약정사항 include -->                   
+			            <div id="hidden_item_desc">
+			            	---- 표시되지 않은 약정내용은 화면상에만 표시되지 않으며 인쇄 시에는 표시됩니다 ----
+			            </div>
+			            
+			            
+			            
+			            <!-- 코멘트 영역(특약사항 불러오기) -->
+						<!-- <div style="position:relative;">
+	                    	<div class="price_display" style="top:40px">
+	                    		<a href="javascript: alert('나의특약불러오기');">특약사항 불러오기</a>  
+	                    	</div>
+	                    </div> -->
+	                    <!-- 코멘트 영역(특약사항 불러오기) 끝 -->
+	                    
+	
+	
+			            <p class="title">[특약사항]</p>
+						<div id="special_agree">
+							<div class="agree_wrap">
+								<textarea id="gy_special_agree1" name="gy_special_agree1" onkeyup="limitLines(this, event, 15)">1) 옵션사항은 임차인 계약기간만료일까지 분실, 파손시 책임진다.
+2) 계약기간전 이사시 임차인은 방을 임대후 나간다 (중개수수료등은 임차인이 부담한다)
+3) 임대인계좌번호: 농협 311-1234-5678-90 홍길동
+4) 옵션사항: 에어컨, 가스렌지, 세탁기, 냉장고, TV, 책상, 의자, 침대, 서랍장
+5) 세대가스요금, 전기요금은 임차인이 부담한다.
+6) 임차인은 계약기간 만료 1개월전까지 계약의 종료 또는 연장여부를 임대인에게 통보하기로 하며 당사자간 아무의사표시없이 계약기간이 경과한 경우 자동으로 계약이 연장된 것으로 본다.
+
+</textarea>
+								<p>[ 아래의 내용은 별지로 인쇄됩니다. ]</p>
+								<textarea id="gy_special_agree2" name="gy_special_agree2"></textarea>
+							</div>
+						</div>
+						
+						
+						<!-- #3. 중간서명 -->
+						<div id="gy_date_wrap">
+							<p>본 계약을 증명하기 위하여 계약당사자가 이의없음을 확인하고 각각 서명·날인한다.</p>
+							<div><input type="text" id="gy_date" name="gy_date" value="2019-01-21" class="calpopup" style="width:85px; line-height: 22px;"/></div>
+						</div>
+						<!-- #3. 중간서명 끝 -->
+						
+						
+						
+						
+						
+						<!-- 코멘트 영역 (매도인, 매수인, 중개사무소추가)-->
+            <div style="position:relative; margin-top:45px; height: 12px;">
+
+                        <!-- 디자인 변경 -->
+	                    	<div class="price_display" style="top:-30px; right:216px; width: 71px; text-align: center;">
+	                    		<a href="javascript: f_addParty('medo');"><span class="gy_form_m">매도인</span><span class="gy_form_j gy_form_w gy_form_y">임대인</span> 추가</a>  
+	                    	</div>
+	                    	<div class="price_display" style="top:-30px; right:124px; width: 71px; text-align: center;">
+	                    		<a href="javascript: f_addParty('mesu');"><span class="gy_form_m">매수인</span><span class="gy_form_j gy_form_w gy_form_y">임차인</span> 추가</a>
+	                    	</div>
+	                    	<div class="price_display" style="top:-30px; width: 97px; text-align: center;">
+	                    		<a href="javascript: f_addParty('agent');">중개사무소  추가</a>
+	                    	</div>
+	                    </div>
+	                    <!-- 코멘트 영역 (매도인, 매수인, 중개사무소추가) 끝-->
+	                    
+	                    
+
+	                    <!-- #4. 매도인 시작 -->
+						<table id="table_medo1">
+							<tr>
+								<th style="width:95px; vertical-align: middle;" rowspan="2" ><span class="gy_form_m">매도인</span><span class="gy_form_j gy_form_w gy_form_y">임대인</span></th>
+								<th style="width:95px"><a href="javascript: f_callDaumAddr('gy_person_medo1_addr', 'gy_person_medo1_idno_gubun')" class="btn" style="width:80px">주&nbsp;&nbsp;소</a></th>
+								<td colspan="5"><input type="text" id="gy_person_medo1_addr" name="gy_person_medo1_addr" value="경북 포항시 북구 우현동 123-12 체킹빌리지 501호" style="width:627px" maxlength="50"/></td>
+							</tr>
+							<tr>
+								<th style="width:120px">
+									<select id="gy_person_medo1_idno_gubun" name="gy_person_medo1_idno_gubun" >
+										<option value="주민등록번호"  selected >주민등록번호</option><option value="법인등록번호" >법인등록번호</option><option value="외국인등록번호" >외국인등록번호</option><option value="기타단체등록번호" >기타단체등록번호</option><option value="제외국민등록번호" >제외국민등록번호</option><option value="사업자등록번호" >사업자등록번호</option>
+	                                </select>
+								</th>
+								<td style="width:165px">
+									<input type="hidden" id="gy_person_medo1_idno" name="gy_person_medo1_idno" value="620504-1144587"/>
+									<span id="medo1_idno_area-1"><input type="text" id="medo1_idno_1" class="ta_center" style="width:70px" maxlength="10"/> - <input type="text" id="medo1_idno_2" class="ta_center" style="width:70px" maxlength="10"/></span>
+									<span id="medo1_idno_area-2" style="display:none"><input type="text" id="medo1_idno_3" class="ta_center" style="width:35px" maxlength="3"/> - <input type="text" id="medo1_idno_4" class="ta_center" style="width:20px" maxlength="2"/> - <input type="text" id="medo1_idno_5" class="ta_center" style="width:70px" maxlength="5"/></span>
+								</td>
+								<th style="width:55px">전화</th>
+								<td style="width:160px"><input type="text" id="gy_person_medo1_tel" name="gy_person_medo1_tel" value="010-1234-5678"  maxlength="40"/></td>
+								
+								<th style="width:55px">성명</th>
+								<td><input type="text" id="gy_person_medo1_name" name="gy_person_medo1_name" value="홍길동" maxlength="20"/></td>
+							</tr>
+	                    </table>
+	                    
+	                    <table id="table_medo2" style="border-top:0px; display:none;">
+							<tr>
+								<th style="width:95px; vertical-align: middle;" rowspan="2" >
+									<select id="gy_person_medo2_gubun" name="gy_person_medo2_gubun" style="width:85px">
+										<option value="대리인" selected>대리인</option>
+										<option value="공동명의인" >공동명의인</option>
+									</select>
+									<br/><a href="javascript: f_deleteParty('medo')" class="btn">삭제</a>
+								</th>
+								<th style="width:85px"><a href="javascript: f_callDaumAddr('gy_person_medo2_addr', 'gy_person_medo2_idno_gubun')" class="btn" style="width:80px">주&nbsp;&nbsp;소</a></th>
+								<td colspan="5"><input type="text" id="gy_person_medo2_addr" name="gy_person_medo2_addr" value="" style="width:627px" maxlength="50"/></td>
+							</tr>
+							<tr>
+								<th style="width:120px">
+									<select id="gy_person_medo2_idno_gubun" name="gy_person_medo2_idno_gubun">
+										<option value="주민등록번호"  selected >주민등록번호</option><option value="법인등록번호" >법인등록번호</option><option value="외국인등록번호" >외국인등록번호</option><option value="기타단체등록번호" >기타단체등록번호</option><option value="제외국민등록번호" >제외국민등록번호</option><option value="사업자등록번호" >사업자등록번호</option>
+	                                </select>
+								</th>
+								<td style="width:165px">
+									<input type="hidden" id="gy_person_medo2_idno" name="gy_person_medo2_idno" value="-"/>
+									<span id="medo2_idno_area-1"><input type="text" id="medo2_idno_1" class="ta_center" style="width:70px" maxlength="10"/> - <input type="text" id="medo2_idno_2" class="ta_center" style="width:70px" maxlength="10"/></span>
+									<span id="medo2_idno_area-2" style="display:none"><input type="text" id="medo2_idno_3" class="ta_center" style="width:35px" maxlength="3"/> - <input type="text" id="medo2_idno_4" class="ta_center" style="width:20px" maxlength="2"/> - <input type="text" id="medo2_idno_5" class="ta_center" style="width:70px" maxlength="5"/></span>
+								</td>
+								<th style="width:55px">전화</th>
+								<td style="width:160px"><input type="text" id="gy_person_medo2_tel" name="gy_person_medo2_tel" value="" maxlength="40"/></td>
+								
+								<th style="width:55px">성명</th>
+								<td><input type="text" id="gy_person_medo2_name" name="gy_person_medo2_name" value="" maxlength="20" /></td>
+							</tr>
+	                    </table>
+	                    <!-- #4. 매도인 끝 -->
+	                    
+	                    
+	                    	                    
+	                    
+          
+	                    
+	                    <!-- #5. 매수인 시작-->
+	                    <div style="height:8px;"></div>
+						<table id="table_mesu1">
+							<tr>
+								<th style="width:95px; vertical-align: middle;" rowspan="2" ><span class="gy_form_m">매수인</span><span class="gy_form_j gy_form_w gy_form_y">임차인</span></th>
+								<th style="width:95px"><a href="javascript: f_callDaumAddr('gy_person_mesu1_addr', 'gy_person_mesu1_idno_gubun')" class="btn" style="width:80px">주&nbsp;&nbsp;소</a></th>
+								<td colspan="5"><input type="text" id="gy_person_mesu1_addr" name="gy_person_mesu1_addr" value="경북 포항시 북구 우현동 123-12 체킹빌리지 203호" style="width:627px" maxlength="50"/></td>
+							</tr>
+							<tr>
+								<th style="width:120px">
+									<select id="gy_person_mesu1_idno_gubun" name="gy_person_mesu1_idno_gubun" >
+										<option value="주민등록번호"  selected >주민등록번호</option><option value="법인등록번호" >법인등록번호</option><option value="외국인등록번호" >외국인등록번호</option><option value="기타단체등록번호" >기타단체등록번호</option><option value="제외국민등록번호" >제외국민등록번호</option><option value="사업자등록번호" >사업자등록번호</option>
+	                                </select>
+								</th>
+								<td style="width:165px">
+									<input type="hidden" id="gy_person_mesu1_idno" name="gy_person_mesu1_idno" value="910905-1127587"/>
+									<span id="mesu1_idno_area-1"><input type="text" id="mesu1_idno_1" class="ta_center" style="width:70px" maxlength="10"/> - <input type="text" id="mesu1_idno_2" class="ta_center" style="width:70px" maxlength="10"/></span>
+									<span id="mesu1_idno_area-2" style="display:none"><input type="text" id="mesu1_idno_3" class="ta_center" style="width:35px" maxlength="3"/> - <input type="text" id="mesu1_idno_4" class="ta_center" style="width:20px" maxlength="2"/> - <input type="text" id="mesu1_idno_5" class="ta_center" style="width:70px" maxlength="5"/></span>
+								</td>
+								<th style="width:55px">전화</th>
+								<td style="width:160px"><input type="text" id="gy_person_mesu1_tel" name="gy_person_mesu1_tel" value="010-4321-9876" maxlength="40"/></td>
+								
+								<th style="width:55px">성명</th> 
+								<td><input type="text" id="gy_person_mesu1_name" name="gy_person_mesu1_name" value="김갑수"  maxlength="20"/></td>
+							</tr>
+	                    </table>
+	                    <table id="table_mesu2" style="border-top:0px; display:none;">
+							<tr>
+								<th style="width:95px; vertical-align: middle;" rowspan="2" >
+									<select id="gy_person_mesu2_gubun" name="gy_person_mesu2_gubun" style="width:85px">
+										<option value="대리인" selected>대리인</option>
+										<option value="공동명의인" >공동명의인</option>
+									</select>
+									<br/><a href="javascript: f_deleteParty('mesu')" class="btn">삭제</a>
+								</th>
+								<th style="width:85px"><a href="javascript: f_callDaumAddr('gy_person_mesu2_addr', 'gy_person_mesu2_idno_gubun')" class="btn" style="width:80px">주&nbsp;&nbsp;소</a></th>
+								<td colspan="5"><input type="text" id="gy_person_mesu2_addr" name="gy_person_mesu2_addr" value="" style="width:627px" maxlength="50"/></td>
+							</tr>
+							<tr>
+								<th style="width:120px">
+									<select id="gy_person_mesu2_idno_gubun" name="gy_person_mesu2_idno_gubun">
+										<option value="주민등록번호"  selected >주민등록번호</option><option value="법인등록번호" >법인등록번호</option><option value="외국인등록번호" >외국인등록번호</option><option value="기타단체등록번호" >기타단체등록번호</option><option value="제외국민등록번호" >제외국민등록번호</option><option value="사업자등록번호" >사업자등록번호</option>
+	                                </select>
+								</th>
+								<td style="width:165px">
+									<input type="hidden" id="gy_person_mesu2_idno" name="gy_person_mesu2_idno" value="-"/>
+									<span id="mesu2_idno_area-1"><input type="text" id="mesu2_idno_1" class="ta_center" style="width:70px" maxlength="10"/> - <input type="text" id="mesu2_idno_2" class="ta_center" style="width:70px" maxlength="10"/></span>
+									<span id="mesu2_idno_area-2" style="display:none"><input type="text" id="mesu2_idno_3" class="ta_center" style="width:35px" maxlength="3"/> - <input type="text" id="mesu2_idno_4" class="ta_center" style="width:20px" maxlength="2"/> - <input type="text" id="mesu2_idno_5" class="ta_center" style="width:70px" maxlength="5"/></span>
+								</td>
+								<th style="width:55px">전화</th>
+								<td style="width:160px"><input type="text" id="gy_person_mesu2_tel" name="gy_person_mesu2_tel" value="" maxlength="40"/></td>
+								
+								<th style="width:55px">성명</th>
+								<td><input type="text" id="gy_person_mesu2_name" name="gy_person_mesu2_name" value="" maxlength="20" /></td>
+							</tr>
+	                    </table>
+	                    <!-- #4. 매수인 끝 -->
+	                    
+	                    
+	                    
+	                    
+	          
+	                    
+	                    <!-- #4. 중개사무소 시작 -->
+                        <div style="height:30px;"></div>
+	                    <table id="table_agent1" style="margin-top:10px">
+							<tr>
+								<th style="width:95px; vertical-align: middle;" rowspan="3" >개업<br/>공인중개사<br/><a href="javascript: f_modal('modal-search-agent', 'agent1')" class="btn">찾기</a></th>
+								<th style="width:95px"><a href="javascript: f_callDaumAddr('gy_agent1_addr', 'gy_agent1_regno')" class="btn">사무소소재지</a></th>
+								<td colspan="3"><input type="text" id="gy_agent1_addr" name="gy_agent1_addr" value="" style="width:627px" maxlength="50"/></td>
+							</tr>
+							<tr>
+								<th style="width:120px">등록번호</th>
+								<td style="width:250px"><input type="text" id="gy_agent1_regno" name="gy_agent1_regno" value="" maxlength="30"/></td>
+								<th style="width:120px">사무소명칭</th>
+								<td ><input type="text" id="gy_agent1_name" name="gy_agent1_name" value="" maxlength="20"/></td>
+							</tr>
+							<tr>
+								<th style="width:120px">전화번호</th>
+								<td style="width:250px"><input type="text" id="gy_agent1_tel" name="gy_agent1_tel" value="" maxlength="40"/></td>
+								<th style="width:120px">대표자명</th>
+								<td style="text-align:right"><input type="hidden" id="gy_agent1_ceo" name="gy_agent1_ceo" value="" />(&nbsp;&nbsp;자필서명&nbsp;&nbsp;)</td>
+							</tr>
+	                    </table>
+	                    <table id="table_agent2" style="border-top:0px; display:none">
+							<tr>
+								<th style="width:95px; vertical-align: middle;" rowspan="3" >개업(공동)<br/>공인중개사<br/><a href="javascript: f_modal('modal-search-agent', 'agent2')" class="btn">찾기</a></th>
+								<th style="width:95px"><a href="javascript: f_callDaumAddr('gy_agent2_addr', 'gy_agent2_regno')" class="btn">사무소소재지</a></th>
+								<td colspan="3"><input type="text" id="gy_agent2_addr" name="gy_agent2_addr" value="" style="width:627px" maxlength="50"/></td>
+							</tr>
+							<tr>
+								<th style="width:120px">등록번호</th>
+								<td style="width:250px"><input type="text" id="gy_agent2_regno" name="gy_agent2_regno" value="" maxlength="30"/></td>
+								<th style="width:120px">사무소명칭</th>
+								<td ><input type="text" id="gy_agent2_name" name="gy_agent2_name" value="" maxlength="20"/></td>
+							</tr>
+							<tr>
+								<th style="width:120px">전화번호</th>
+								<td style="width:250px"><input type="text" id="gy_agent2_tel" name="gy_agent2_tel" value="" maxlength="40"/></td>
+								<th style="width:120px">대표자명</th>
+								<td style="text-align:right"><input type="hidden" id="gy_agent2_ceo" name="gy_agent2_ceo" value="" />(&nbsp;&nbsp;자필서명&nbsp;&nbsp;)</td>
+							</tr>
+                      </table>
+                      
+                      <!-- 디자인 변경 -->
+	                    <span style="float:right; padding:6px 4px;" id="agent_delete_button"><a href="javascript: f_deleteParty('agent')" class="btn">중개사무소 삭제</a></span>
+	                    <!-- #4. 중개사무소 끝 -->
+	                    
+	                    
+	                    
+	                    
+					</div>
+					<!-- body 끝 -->
+					
+					
+					
+					
+					
+					<!-- 퀵메뉴 -->
+					
+
+
+<script>
+
+
+//프린트설정 열고닫기
+function f_printSet(){
+	$('#btn_printset').removeClass('bigbtnhover');
+	$('#print-layer').slideToggle("fast", function() {
+		//alert($('#print-layer').css("display"));
+		
+		if($('#print-layer').css("display")=="block"){
+			$('#btn_printset').removeClass('bigbtnhover');		
+		}else{
+			$('#btn_printset').addClass('bigbtnhover');
+		}
+		  
+	});
+}
+function f_print(){
+	if(!$('#chk_print_cover').is(":checked") 
+			&& !$('#chk_print_geyac').is(":checked")
+			&& !$('#chk_print_confirm').is(":checked")
+			&& !$('#chk_print_privacy').is(":checked")		){
+		alert("프린트할 항목(표지, 계약서, 확인설명서, 개인정보활용동의서)을 \n하나이상 체크해주시기 바랍니다!!!!!.");
+		return;
+	}else{
+		
+		
+		if(confirm("변경하신 사항이 있는경우 저장버튼을 눌러서 저장하신 후 인쇄바랍니다!\n\n계속해서 인쇄하시겠습니까?")){
+			
+			alert("계약서가 pdf파일로 저장됩니다.\npdf파일을 열어서 인쇄하세요.\n\n출력된 내용을 확인 하신후 출력물을 교부하시기 바랍니다.\n(글자수 제한, 등의 사유로 출력되지 않는 내용이 있을 수 있습니다. 디디하우스는 법적인 책임이 없습니다)");
+			
+			var frm = document.forms.frmPrint;
+			
+			if($('#chk_print_cover').is(":checked")){
+				frm.print_cover.value = "Y";
+			}else{
+				frm.print_cover.value = "";
+			}
+			if($('#chk_print_geyac').is(":checked")){
+				frm.print_geyac.value = "Y";
+			}else{
+				frm.print_geyac.value = "";
+			}
+			if($('#chk_print_confirm').is(":checked")){
+				frm.print_confirm.value = "Y";
+			}else{
+				frm.print_confirm.value = "";
+			}
+			if($('#chk_print_privacy').is(":checked")){
+				frm.print_privacy.value = "Y";
+			}else{
+				frm.print_privacy.value = "";
+			}
+			
+			
+			
+			frm.selAction.value = "pdf";
+			frm.gy_cate01.value = $('#gy_cate01').val();
+			frm.gy_idx.value = $('#gy_idx').val();
+			frm.action ="/memberGeyacPdf.do";
+			frm.submit();
+		}
+		
+	}
+}
+
+
+
+
+
+
+$(function(){
+	$('#chk_print_confirm').on("click", function(){
+		if($('#confirm_idx').val()=="" || $("#confirm_idx").val()==-1){
+			alert("현재 작성된 확인설명서가 없습니다.\n\n확인설명서를 먼저 작성해 주시기 바랍니다.");
+			
+			$(this).attr("checked", false);
+			$(this).prop("checked", false);
+		}
+	});
+});
+
+
+</script>
+					<div id="quickbar">
+						<div id="quickbar_wrap">
+							<div class="quickbar_container">
+								<p class="title">계약서 작성상태</p>
+								
+								<p class="item">1. 계약서 <span class="stat" id="quick_gy_status">[-]</span></p>
+								<p class="item">2. 확인설명서<span class="stat" id="quick_confirm_status">[-]</span></p>
+								<p class="item">3. 메모</p>
+								<div style="padding:5px 0;">
+									<textarea id="quick_gy_memo"></textarea>
+								</div>
+								<p class="item">4. 즐겨찾기<span class="stat" id="quick_fav_name">[-]</span></p>
+							</div>
+						</div>
+						
+	    				<div class="button_wrap">
+							<div class="bigbtn bigbtnhover">
+								<span onclick="javascript: f_modal('modal-save')" style="display:inline-block; width:100%;">계약서 저장</span>
+							</div>
+							<div id="btn_printset" class="bigbtn bigbtnhover">
+								<span onclick="javascript: f_printSet()" style="display:inline-block; width:100%;">프린트</span>
+								<div id="print-layer">
+									<label style="cursor:pointer;"><input id="chk_print_cover" type="checkbox"> 표지</label><br/>
+									<label style="cursor:pointer;"><input id="chk_print_geyac" type="checkbox" checked> 계약서</label><br/>
+									<label style="cursor:pointer;"><input id="chk_print_confirm" type="checkbox"> 확인설명서</label><br/>
+									<label style="cursor:pointer;"><input id="chk_print_privacy" type="checkbox"> 개인정보활용동의서</label><br/>
+									<p style="text-align:center; margin-top:15px"><a href="javascript: f_print()" class="btn-search" style="width:70px">출 력</a></p>
+								</div>
+							</div>
+	    				</div>
+					</div>
+					<!-- 퀵메뉴 끝 -->
+					
+				</div>
+				<!-- 계약서 본문 끝 -->
+				
+				
+				
+				
+				
+				
+			</form>	
+			</div>
+			<!-- 등록폼(rform) 끝 -->
+			
+			</div>
+			
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- 컨테이너 끝  -->
+	
+
+ 
+
+</div>
+<!-- Global Wrapper.e -->
+
+
+
+	<!-- 레이어  -->
+	
+
+
+
+
+
+
+<style>
+#agent_list li{ line-height:22px; border-bottom:1px dotted #efefef; padding-bottom:2px; }
+#agent_list li > span.title{ display:inline-block; width:200px;  }
+
+</style>
+<div class="modal_bd"></div>
+
+
+<!--  -->
+<div id="modal-save" class="modal_container">
+	<div class="pop-save-wrap">
+		<div style="position:absolute;top: -12px; right: -12px; cursor:pointer;"><img src="/img/btn/btn_popup_close.png" style="width:25px; height:25px" onclick="javascript: f_modal_close('modal-save')"/></div>
+		<h1 style="text-align:center; font-size:15px; padding-bottom:7px; border-bottom:2px solid gray;">계약서 저장</h1>
+		
+		<div style="padding:0 15px; ">
+			<div style="margin-top:20px; padding:15px; border:1px solid #CACACA; background-color: #F3F3F3; line-height:30px;">
+			
+				<!-- - 작성상태 : <input type="radio" name="modal_chk_comp" value="Y" >작성완료 <input type="radio" name="modal_chk_comp" value="N">작성중
+				<br/> -->
+				
+				
+				
+				- 즐겨찾기 폴더 : 
+				<select id="modal_favorite_folder">
+					<option value="">:: 미지정 ::</option>
+					<option value='1543'  selected>하늘애</option>
+					<option value="newfolder">새로 만들기</option>
+				</select>
+				<input type="text" id="modal_newfolder_name" style="display:none; width:120px" maxlength="10"/>
+				
+			</div>
+			<p>※ 입력된 매수.매도인 정보는 작성완료 체크 후 저장 시 고객정보에 자동 등록(갱신)됩니다.</p>
+		</div>
+		
+		
+		<div style="text-align:center; padding:15px 0;">
+			
+				<a href="javascript: f_modify()" class="btn">계약서 저장</a>
+			
+			<a href="javascript: f_modal_close('modal-save')" class="btn">취소</a>
+		</div>
+	</div>
+</div>
+
+
+    
+
+<!-- 확인설명서 컨펌창 -->
+<div id="modal-confirm" class="modal_container">
+	<div class="pop-save-wrap">
+		<div style="position:absolute;top: -12px; right: -12px; cursor:pointer;"><img src="/img/btn/btn_popup_close.png" style="width:25px; height:25px" onclick="javascript: f_modal_close('modal-confirm')"/></div>
+		<h1 style="text-align:center; font-size:15px; padding-bottom:7px; border-bottom:2px solid gray;">확인설명서를 선택해주세요.</h1>
+		
+		<div style="padding:0 15px; ">
+			<div style="margin-top:20px; padding:15px; border:1px solid #CACACA; background-color: #F3F3F3; line-height:30px; text-align:center;">
+				
+				<a href="javascript: f_goConfirm('01')" class="btn-search" style="width:80px">주거용</a>
+				<a href="javascript: f_goConfirm('02')" class="btn-search" style="width:80px">비주거용</a>
+				<a href="javascript: f_goConfirm('03')" class="btn-search" style="width:80px">토지용</a>
+				<a href="javascript: f_goConfirm('04')" class="btn-search" style="width:80px">입목용</a>
+				
+      </div>
+      
+      <!-- 디자인 변경 -->
+			<p style="color:tomato">※ 반드시 건축물 대장상 용도로 사용하셔야 합니다.</p>
+			<p style="color:tomato">※ 변경된 계약서 내용은 저장되지 않습니다. 저장버튼을 누르시기 바랍니다.</p>
+		</div>
+		
+		
+		<!-- <div style="text-align:center; padding:15px 0;">
+			<a href="javascript: f_modal_close('modal-confirm')" class="btn">취소</a>
+		</div> -->
+	</div>
+</div>
+
+
+
+
+<!-- 확인설명서 변경창 -->
+<div id="modal-confirm-change" class="modal_container">
+	<div class="pop-save-wrap">
+		<div style="position:absolute;top: -12px; right: -12px; cursor:pointer;"><img src="/img/btn/btn_popup_close.png" style="width:25px; height:25px" onclick="javascript: f_modal_close('modal-confirm-change')"/></div>
+		<h1 style="text-align:center; font-size:15px; padding-bottom:7px; border-bottom:2px solid gray;">변경할 확인설명서를 선택해주세요.</h1>
+		
+		<div style="padding:0 15px; ">
+			<div style="margin-top:20px; padding:15px; border:1px solid #CACACA; background-color: #F3F3F3; line-height:30px; text-align:center;">
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+		</div>
+		
+		
+		<div style="text-align:center; padding:15px 0;">
+			<a href="javascript: f_modal_close('modal-confirm-change')" class="btn">취소</a>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<!-- 중개업소 찾기-->
+<div id="modal-search-agent" class="modal_container">
+	<div class="pop-save-wrap">
+		<div style="position:absolute;top: -12px; right: -12px; cursor:pointer;"><img src="/img/btn/btn_popup_close.png" style="width:25px; height:25px" onclick="javascript: f_modal_close('modal-search-agent')"/></div>
+		<h1 style="text-align:center; font-size:15px; padding-bottom:7px; border-bottom:2px solid gray;">개업 공인중개사 사무소</h1>
+		
+		<div style="padding:0 15px; ">
+			<div style="margin-top:20px; padding:15px; border:1px solid #CACACA; background-color: #F3F3F3; line-height:30px; text-align:center;">
+				
+				<div style="font-size:17px; padding:8px; font-weight:bold; ">
+					<select id="agent_search_gubun" style="line-height:36px; height:36px; padding:3px;">
+						<option value="agentname">중개사무소명</option>
+						<option value="agenttel">전화번호</option>
+					</select>
+					<input type="text" id="agent_search_box" value="" style="width:150px; line-height:28px; padding:3px; height:28px;"/>
+					<a href="javascript: f_search_agent()" class="btn-search">검색</a>
+				</div>
+				
+				<div style="text-align:left; margin-top:15px; padding:5px; border:1px solid gray; background-color:white; height:400px; overflow-y:scroll">
+					<ul id="agent_list">
+						<li style="text-align:center;">중개업소를 검색해주세요.</li>
+					</ul>				
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<!-- <div style="text-align:center; padding:15px 0;">
+			<a href="javascript: f_modal_close('modal-search-agent')" class="btn">취소</a>
+		</div> -->
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- 레이어 끝 -->
+</body>
+</html>
